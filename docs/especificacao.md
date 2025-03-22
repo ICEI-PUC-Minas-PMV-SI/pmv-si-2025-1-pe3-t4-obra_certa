@@ -36,18 +36,18 @@ O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcela
 | RF3	| Gerenciar Aluguel |	Processamento de Inclusão, Alteração, Exclusão e Consulta de aluguéis |
 | RF4	| Gerenciar Manutenções |	Processamento de Inclusão, Alteração, Exclusão e Consulta de manutenções dos equipamentos |
 | RF5	| Filtro de Equipamentos |	Implementar filtros de equipamentos por tipo/categoria |
-| RF6	| Status |	Mostrar o status de disponibilidade dos equipamentos |
+| RF6	| Status de disponibilidade |	Mostrar o status de disponibilidade dos equipamentos |
 | RF7	| Calendário |	Exibir calendário com datas disponíveis para cada equipamento |
 | RF8	| Cálculo do valor de aluguel |	Calcular automaticamente o valor total do aluguel com base no tempo e valor de cada equipamento |
 | RF9	| Reservas futuras |	Permitir o registro de reservas futuras de equipamentos |
 | RF10	| Bloquear equipamentos reservados |	Bloquear equipamentos já alugados para evitar conflitos de agendamento |
 | RF11	| Filtro por status |	Implementar filtros de aluguéis por status para o administrador |
 | RF12	| Gráfico de quantidade de aluguéis por dia | Exibir gráficos de quantidade de aluguéis realizados por dia, na página inicial do painel admin |
-| RF13	| Gráfico de total de aluguéis dos equipamentos | Exibir gráficos com o número total de vezes que o equipamento foi alugado, na página inicial do painel admin |
+| RF13	| Gráfico de total de aluguéis dos equipamentos | Exibir gráficos com o número total de vezes que cada equipamento foi alugado, na página inicial do painel admin |
 | RF14	| Formulário para contato |	Disponibilizar formulário de contato para solicitações de clientes, na landing page |
-| RF15	| Informações sobre equipamentos |	Exibir informações detalhadas de cada equipamento ao clicar, na landing page e no admin |
+| RF15	| Informações sobre equipamentos |	Exibir informações detalhadas de cada equipamento ao clicar, tanto na landing page quanto no admin |
 | RF16	| Histórico de aluguéis por cliente |	Visualizar histórico completo de aluguéis realizados por cliente específico |
-| ... |	...	| ... |
+| RF17	| Login |	Permitir que o admin do sistema (funcionário da empresa) consiga logar no sistema admin, com credenciais pré-cadastradas |
 
 ### 3.3.2 Requisitos Não Funcionais
 
