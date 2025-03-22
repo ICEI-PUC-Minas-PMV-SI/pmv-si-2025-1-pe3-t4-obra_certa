@@ -40,18 +40,20 @@ O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcela
 
 | Código | Requisito Não Funcional (Restrição) |
 |--------------------|------------------------------------|
-| RNF1 | O ambiente operacional a ser utilizado é o Windows XP. |
-| RNF2 | O sistema deverá executar em um computador configurado com uma impressora de tecnologia laser ou de jato de tinta, a ser usada para impressão dos relatórios. |
-| RNF3 |	Segurança	O produto deve restringir o acesso por meio de senhas individuais para o usuário. |
-| ... |	... |	... |
+| RNF1 |	A landing page deve se adaptar corretamente a todos os tamanhos de tela, desde dispositivos móveis até monitores desktop. |
+| RNF2	| O sistema deve estar disponível pelo menos 99,5% do tempo. |
+| RNF3 |	O código-fonte deve seguir padrões de boas práticas para facilitar futuras manutenções. |
+| RNF4 |	O sistema deve ser acessível via navegadores modernos, sem perdas de funcionalidades. |
+| RNF5 |	O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados. |
+| RNF6	| O design do sistema deve seguir uma identidade visual intuitiva e padronizada, garantindo uma boa usabilidade. |
+| RNF7 |	O sistema deve exigir autenticação para que o administrador acesse funcionalidades restritas. |
 
 ### 3.3.3 Usuários 
 
 | Ator | Descrição |
 |--------------------|------------------------------------|
-| Coordenador |	Usuário gerente do sistema responsável pelo cadastro e manutenção de cursos de aperfeiçoamento. Possui acesso geral ao sistema. |
-| Secretaria |	Usuário responsável por registros de alunos, professores, turmas e gerência de matrículas. |
-| ... |	... |	... |
+| Administrador |	Usuário responsável pelo gerenciamento do sistema. Possui acesso para gerenciar clientes, equipamentos e aluguéis, além de visualizar relatórios e estatísticas. |
+| Cliente |	Usuário que interage apenas com a landing page para conhecer os serviços da empresa, visualizar os equipamentos disponíveis e entrar em contato com o administrador. |
 
 ## 3.4 Modelagem do Sistema
 
