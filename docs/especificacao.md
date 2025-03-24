@@ -31,10 +31,25 @@ O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcela
 
 | Código | Requisito Funcional (Funcionalidade) | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
-| RF1 | Gerenciar Curso de Aperfeiçoamento |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Cursos de Aperfeiçoamento |
-| RF2 |	Gerenciar Professor	| Processamento de Inclusão, Alteração, Exclusão e Consulta de professores |
-| RF3	| Gerenciar Matrícula |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Matrículas de alunos em Cursos de Aperfeiçoamento |
-| ... |	...	| ... |
+| RF1 | Gerenciar Clientes |	Processamento de Inclusão, Alteração, Exclusão e Consulta de clientes |
+| RF2 |	Gerenciar Equipamentos	| Processamento de Inclusão, Alteração, Exclusão de equipamentos |
+| RF3 |	Consultar Equipamentos	| Processamento de Consulta de equipamentos |
+| RF4	| Gerenciar Aluguel |	Processamento de Inclusão, Alteração, Exclusão e Consulta de aluguéis |
+| RF5	| Gerenciar Manutenções |	Processamento de Inclusão, Alteração, Exclusão e Consulta de manutenções dos equipamentos |
+| RF6	| Filtrar equipamentos |	Implementar filtros de equipamentos por tipo/categoria |
+| RF7	| Visualizar status de disponibilidade |	Mostrar o status de disponibilidade dos equipamentos |
+| RF8	| Visualizar calendário |	Exibir calendário com datas disponíveis para cada equipamento |
+| RF9	| Cálcular valor de aluguel |	Calcular automaticamente o valor total do aluguel com base no tempo e valor de cada equipamento |
+| RF10	| Registrar reservas futuras |	Permitir o registro de reservas futuras de equipamentos |
+| RF11	| Filtrar aluguéis por status |	Implementar filtros de aluguéis por status para o administrador |
+| RF12	| Exibir gráfico de quantidade de aluguéis por dia | Exibir gráficos de quantidade de aluguéis realizados por dia, na página inicial do painel admin |
+| RF13	| Exibir gráfico de total de aluguéis dos equipamentos | Exibir gráficos com o número total de vezes que cada equipamento foi alugado, na página inicial do painel admin |
+| RF14	| Disponibilizar formulário para contato |	Disponibilizar formulário de contato para solicitações de clientes, na landing page |
+| RF15	| Consultar histórico de aluguéis por cliente |	Visualizar histórico completo de aluguéis realizados por cliente específico |
+| RF16	| Realizar login |	Permitir que o admin do sistema (funcionário da empresa) consiga logar no sistema admin, com credenciais pré-cadastradas |
+| RF17	| Realizar logout |	Permitir que o admin do sistema (funcionário da empresa) consiga deslogar do sistema admin |
+| RF18	| Permitir consulta de relatórios de quantidade de aluguéis por dia |	Exibir relatório de quantidade de aluguéis realizados por dia |
+| RF19	| Permitir consulta de relatórios de total de aluguéis dos equipamentos | Exibir relatório com o número total de vezes que cada equipamento foi alugado |
 
 ### 3.3.2 Requisitos Não Funcionais
 
