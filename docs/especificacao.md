@@ -11,64 +11,64 @@ Descrever e especificar as necessidades da empresa de aluguel de equipamentos e 
 O produto será denominado SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento. Ele terá somente um componente (módulo) com os devidos elementos necessários à gestão de cursos.
 
 ### 3.2.2 Missão do produto
-Gerenciar informações sobre a oferta de cursos de aperfeiçoamento, gerenciar a composição das turmas, alunos, professores e matrículas. 
+Gerenciar informações sobre a oferta de cursos de aperfeiçoamento, gerenciar a composição das turmas, alunos, professores e matrículas.
 
 ### 3.2.3 Limites do produto
 O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcelas do curso, pagamento a professore e agendamentos. O SCCA não contempla o atendimento a vários cursos de Sistemas de Informação de outras unidades da PUC Minas.
 
 ### 3.2.4 Benefícios do produto
 
-| # | Benefício | Valor para o Cliente |
-|--------------------|------------------------------------|----------------------------------------|
-|1	| Facilidade no cadastro de dados |	Essencial |
-|2 | Facilidade na recuperação de informações | Essencial | 
-|3 | Segurança no cadastro de matrículas | Essencial | 
-|4	| Melhoria na comunicação com os alunos	| Recomendável | 
+| #   | Benefício                                | Valor para o Cliente |
+| --- | ---------------------------------------- | -------------------- |
+| 1   | Facilidade no cadastro de dados          | Essencial            |
+| 2   | Facilidade na recuperação de informações | Essencial            |
+| 3   | Segurança no cadastro de matrículas      | Essencial            |
+| 4   | Melhoria na comunicação com os alunos    | Recomendável         |
 
 ## 3.3 Descrição geral do produto
 
 ### 3.3.1 Requisitos Funcionais
 
-| Código | Requisito Funcional (Funcionalidade) | Descrição |
-|--------------------|------------------------------------|----------------------------------------|
-| RF1 | Gerenciar Clientes |	Processamento de Inclusão, Alteração, Exclusão e Consulta de clientes |
-| RF2 |	Gerenciar Equipamentos	| Processamento de Inclusão, Alteração, Exclusão de equipamentos |
-| RF3 |	Consultar Equipamentos	| Processamento de Consulta de equipamentos |
-| RF4	| Gerenciar Aluguel |	Processamento de Inclusão, Alteração, Exclusão e Consulta de aluguéis |
-| RF5	| Gerenciar Manutenções |	Processamento de Inclusão, Alteração, Exclusão e Consulta de manutenções dos equipamentos |
-| RF6	| Filtrar equipamentos |	Implementar filtros de equipamentos por tipo/categoria |
-| RF7	| Visualizar status de disponibilidade |	Mostrar o status de disponibilidade dos equipamentos |
-| RF8	| Visualizar calendário |	Exibir calendário com datas disponíveis para cada equipamento |
-| RF9	| Cálcular valor de aluguel |	Calcular automaticamente o valor total do aluguel com base no tempo e valor de cada equipamento |
-| RF10	| Registrar reservas futuras |	Permitir o registro de reservas futuras de equipamentos |
-| RF11	| Filtrar aluguéis por status |	Implementar filtros de aluguéis por status para o administrador |
-| RF12	| Exibir gráfico de quantidade de aluguéis por dia | Exibir gráficos de quantidade de aluguéis realizados por dia, na página inicial do painel admin |
-| RF13	| Exibir gráfico de total de aluguéis dos equipamentos | Exibir gráficos com o número total de vezes que cada equipamento foi alugado, na página inicial do painel admin |
-| RF14	| Disponibilizar formulário para contato |	Disponibilizar formulário de contato para solicitações de clientes, na landing page |
-| RF15	| Consultar histórico de aluguéis por cliente |	Visualizar histórico completo de aluguéis realizados por cliente específico |
-| RF16	| Realizar login |	Permitir que o admin do sistema (funcionário da empresa) consiga logar no sistema admin, com credenciais pré-cadastradas |
-| RF17	| Realizar logout |	Permitir que o admin do sistema (funcionário da empresa) consiga deslogar do sistema admin |
-| RF18	| Permitir consulta de relatórios de quantidade de aluguéis por dia |	Exibir relatório de quantidade de aluguéis realizados por dia |
-| RF19	| Permitir consulta de relatórios de total de aluguéis dos equipamentos | Exibir relatório com o número total de vezes que cada equipamento foi alugado |
+| Código | Requisito Funcional (Funcionalidade)                                  | Descrição                                                                                                                |
+| ------ | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| RF1    | Gerenciar Clientes                                                    | Processamento de Inclusão, Alteração, Exclusão e Consulta de clientes                                                    |
+| RF2    | Gerenciar Equipamentos                                                | Processamento de Inclusão, Alteração, Exclusão de equipamentos                                                           |
+| RF3    | Consultar Equipamentos                                                | Processamento de Consulta de equipamentos                                                                                |
+| RF4    | Gerenciar Aluguel                                                     | Processamento de Inclusão, Alteração, Exclusão e Consulta de aluguéis                                                    |
+| RF5    | Gerenciar Manutenções                                                 | Processamento de Inclusão, Alteração, Exclusão e Consulta de manutenções dos equipamentos                                |
+| RF6    | Filtrar equipamentos                                                  | Implementar filtros de equipamentos por tipo/categoria                                                                   |
+| RF7    | Visualizar status de disponibilidade                                  | Mostrar o status de disponibilidade dos equipamentos                                                                     |
+| RF8    | Visualizar calendário                                                 | Exibir calendário com datas disponíveis para cada equipamento                                                            |
+| RF9    | Cálcular valor de aluguel                                             | Calcular automaticamente o valor total do aluguel com base no tempo e valor de cada equipamento                          |
+| RF10   | Registrar reservas futuras                                            | Permitir o registro de reservas futuras de equipamentos                                                                  |
+| RF11   | Filtrar aluguéis por status                                           | Implementar filtros de aluguéis por status para o administrador                                                          |
+| RF12   | Exibir gráfico de quantidade de aluguéis por dia                      | Exibir gráficos de quantidade de aluguéis realizados por dia, na página inicial do painel admin                          |
+| RF13   | Exibir gráfico de total de aluguéis dos equipamentos                  | Exibir gráficos com o número total de vezes que cada equipamento foi alugado, na página inicial do painel admin          |
+| RF14   | Disponibilizar formulário para contato                                | Disponibilizar formulário de contato para solicitações de clientes, na landing page                                      |
+| RF15   | Consultar histórico de aluguéis por cliente                           | Visualizar histórico completo de aluguéis realizados por cliente específico                                              |
+| RF16   | Realizar login                                                        | Permitir que o admin do sistema (funcionário da empresa) consiga logar no sistema admin, com credenciais pré-cadastradas |
+| RF17   | Realizar logout                                                       | Permitir que o admin do sistema (funcionário da empresa) consiga deslogar do sistema admin                               |
+| RF18   | Permitir consulta de relatórios de quantidade de aluguéis por dia     | Exibir relatório de quantidade de aluguéis realizados por dia                                                            |
+| RF19   | Permitir consulta de relatórios de total de aluguéis dos equipamentos | Exibir relatório com o número total de vezes que cada equipamento foi alugado                                            |
 
 ### 3.3.2 Requisitos Não Funcionais
 
-| Código | Requisito Não Funcional (Restrição) |
-|--------------------|------------------------------------|
-| RNF1 |	A landing page deve se adaptar corretamente a todos os tamanhos de tela, desde dispositivos móveis até monitores desktop. |
-| RNF2	| O sistema deve estar disponível pelo menos 99,5% do tempo. |
-| RNF3 |	O código-fonte deve seguir padrões de boas práticas para facilitar futuras manutenções. |
-| RNF4 |	O sistema deve ser acessível via navegadores modernos, sem perdas de funcionalidades. |
-| RNF5 |	O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados. |
-| RNF6	| O design do sistema deve seguir uma identidade visual intuitiva e padronizada, garantindo uma boa usabilidade. |
-| RNF7 |	O sistema deve exigir autenticação para que o administrador acesse funcionalidades restritas. |
+| Código | Requisito Não Funcional (Restrição)                                                                                       |
+| ------ | ------------------------------------------------------------------------------------------------------------------------- |
+| RNF1   | A landing page deve se adaptar corretamente a todos os tamanhos de tela, desde dispositivos móveis até monitores desktop. |
+| RNF2   | O sistema deve estar disponível pelo menos 99,5% do tempo.                                                                |
+| RNF3   | O código-fonte deve seguir padrões de boas práticas para facilitar futuras manutenções.                                   |
+| RNF4   | O sistema deve ser acessível via navegadores modernos, sem perdas de funcionalidades.                                     |
+| RNF5   | O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados.                                                |
+| RNF6   | O design do sistema deve seguir uma identidade visual intuitiva e padronizada, garantindo uma boa usabilidade.            |
+| RNF7   | O sistema deve exigir autenticação para que o administrador acesse funcionalidades restritas.                             |
 
-### 3.3.3 Usuários 
+### 3.3.3 Usuários
 
-| Ator | Descrição |
-|--------------------|------------------------------------|
-| Administrador |	Usuário responsável pelo gerenciamento do sistema. Possui acesso para gerenciar clientes, equipamentos e aluguéis, além de visualizar relatórios e estatísticas. |
-| Cliente |	Usuário que interage apenas com a landing page para conhecer os serviços da empresa, visualizar os equipamentos disponíveis e entrar em contato com o administrador. |
+| Ator          | Descrição                                                                                                                                                            |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Administrador | Usuário responsável pelo gerenciamento do sistema. Possui acesso para gerenciar clientes, equipamentos e aluguéis, além de visualizar relatórios e estatísticas.     |
+| Cliente       | Usuário que interage apenas com a landing page para conhecer os serviços da empresa, visualizar os equipamentos disponíveis e entrar em contato com o administrador. |
 
 ## 3.4 Modelagem do Sistema
 
@@ -77,8 +77,8 @@ Como observado no diagrama de casos de uso da Figura 1, a secretária poderá ge
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
-![dcu](https://github.com/user-attachments/assets/41f6b731-b44e-43aa-911f-423ad6198f47)
- 
+![Diagrama de Caso de Uso](./img/dcu.png)
+
 ### 3.4.2 Descrições de Casos de Uso
 
 Cada caso de uso deve ter a sua descrição representada nesta seção. Exemplo:
@@ -118,7 +118,7 @@ Fluxo Alternativo (3): Alteração
 
 a)	A Secretária altera um ou mais dos detalhes do professor e requisita sua atualização. <br>
 b)	O Sistema verifica a validade dos dados e, se eles forem válidos, altera os dados na lista de professores, caso contrário, o erro é reportado. <br>
- 
+
 Fluxo Alternativo (3): Consulta
 
 a)	A Secretária opta por pesquisar pelo nome ou código e solicita a consulta sobre a lista de professores. <br>
@@ -128,22 +128,22 @@ d)	O Sistema apresenta os detalhes do professor no formulário de professores. <
 
 Pós-condições: Um professor foi inserido ou removido, seus dados foram alterados ou apresentados na tela.
 
-### 3.4.3 Diagrama de Classes 
+### 3.4.3 Diagrama de Classes
 
 A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a identificação do funcionário responsável pelo registro, bem com os dados do aluno e turmas. Para uma disciplina podemos ter diversas turmas, mas apenas um professor responsável por ela.
 
 #### Figura 2: Diagrama de Classes do Sistema.
- 
+
 ![image](https://github.com/user-attachments/assets/abc7591a-b46f-4ea2-b8f0-c116b60eb24e)
 
 
-### 3.4.4 Descrições das Classes 
+### 3.4.4 Descrições das Classes
 
-| # | Nome | Descrição |
-|--------------------|------------------------------------|----------------------------------------|
-| 1	|	Aluno |	Cadastro de informações relativas aos alunos. |
-| 2	| Curso |	Cadastro geral de cursos de aperfeiçoamento. |
-| 3 |	Matrícula |	Cadastro de Matrículas de alunos nos cursos. |
-| 4 |	Turma |	Cadastro de turmas.
-| 5	|	Professor |	Cadastro geral de professores que ministram as disciplinas. |
-| ... |	... |	... |
+| #   | Nome      | Descrição                                                   |
+| --- | --------- | ----------------------------------------------------------- |
+| 1   | Aluno     | Cadastro de informações relativas aos alunos.               |
+| 2   | Curso     | Cadastro geral de cursos de aperfeiçoamento.                |
+| 3   | Matrícula | Cadastro de Matrículas de alunos nos cursos.                |
+| 4   | Turma     | Cadastro de turmas.                                         |
+| 5   | Professor | Cadastro geral de professores que ministram as disciplinas. |
+| ... | ...       | ...                                                         |
