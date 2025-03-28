@@ -1,6 +1,6 @@
 # 1. INTRODUÇÃO
 
-No âmbito industrial e da construção civil, a gestão eficiente do aluguel de equipamentos e máquinas é um fator crucial para a produtividade e a otimização de recursos. De acordo com a Associação Brasileira dos Sindicatos e Associações Representantes dos Locadores de Equipamentos, Máquinas e Ferramentas (Analoc), o mercado de locação de equipamentos envolve cerca de 45 mil empresas no Brasil e movimenta aproximadamente R$ 70 bilhões por ano (Apelmat, 2024). Empresas e profissionais que dependem desses equipamentos para suas operações enfrentam desafios diários relacionados à disponibilidade, manutenção e custo-benefício da locação. Nesse contexto, a implementação de um sistema digital para gerenciar aluguéis de forma eficiente surge como uma solução, trazendo maior transparência e controle para empresas locadoras e seus clientes. No entanto, segundo um estudo da Confederação Nacional da Indústria (CNI), 73% das empresas da indústria da construção utilizam ao menos uma técnica de manufatura enxuta, enquanto 33% adotam pelo menos quatro técnicas (Portal da Indústria, 2025). 
+No âmbito industrial e da construção civil, a gestão eficiente do aluguel de equipamentos e máquinas é um fator crucial para a produtividade e a otimização de recursos. De acordo com a Associação Brasileira dos Sindicatos e Associações Representantes dos Locadores de Equipamentos, Máquinas e Ferramentas (Analoc), o mercado de locação de equipamentos envolve cerca de 45 mil empresas no Brasil e movimenta aproximadamente R$ 70 bilhões por ano (Apelmat, 2024). Empresas e profissionais que dependem desses equipamentos para suas operações enfrentam desafios diários relacionados à disponibilidade, manutenção e custo-benefício da locação. Nesse contexto, a implementação de um sistema digital para gerenciar aluguéis de forma eficiente surge como uma solução, trazendo maior transparência e controle para empresas locadoras e seus clientes. No entanto, segundo um estudo da Confederação Nacional da Indústria (CNI), 73% das empresas da indústria da construção utilizam ao menos uma técnica de manufatura enxuta, enquanto 33% adotam pelo menos quatro técnicas (Portal da Indústria, 2025).
 
 Isso demonstra que a digitalização da gestão da locação de equipamentos ainda é um desafio para muitas empresas. Dessa forma, torna-se essencial o desenvolvimento de um sistema que modernize e facilite o processo de aluguel de equipamentos e máquinas, garantindo maior organização e eficiência nas operações desse tipo de negócio.
 
@@ -12,8 +12,8 @@ A necessidade de um software especializado se torna evidente diante desses desaf
 
 ## 1.2. Objetivos do trabalho
 
-Diante desse contexto, o trabalho tem como objetivo geral desenvolver um sistema web para a gestão de aluguel de equipamentos e máquinas, visando garantir um controle eficiente e seguro para a empresa locadora e seus clientes. 
-Como objetivos específicos, o projeto visa: 
+Diante desse contexto, o trabalho tem como objetivo geral desenvolver um sistema web para a gestão de aluguel de equipamentos e máquinas, visando garantir um controle eficiente e seguro para a empresa locadora e seus clientes.
+Como objetivos específicos, o projeto visa:
 - Permitir que os funcionários registrem os pedidos de locação, informando detalhes como data de início e término, tipo de equipamento solicitado, valores por dia ou hora;
 - Oferecer o controle de disponibilidade dos equipamentos;
 - Disponibilizar cálculo automático dos valores de aluguel;
@@ -29,6 +29,6 @@ Com a implementação de um sistema digital, esses desafios podem ser superados,
 
 ## 1.4. Público alvo
 
-O sistema de gerenciamento de aluguel de equipamentos e máquinas será voltado para empresas locadoras que oferecem desde ferramentas menores até máquinas de grande porte, abrangendo setores como construção civil, agronegócio, indústria e serviços. 
+O sistema de gerenciamento de aluguel de equipamentos e máquinas será voltado para empresas locadoras que oferecem desde ferramentas menores até máquinas de grande porte, abrangendo setores como construção civil, agronegócio, indústria e serviços.
 
 Além disso, atenderá também profissionais autônomos que necessitam de equipamentos para trabalhos temporários. Nosso sistema beneficiará tanto os funcionários das locadoras, que gerenciam os processos de locação, quanto os clientes, que poderão alugar equipamentos de maneira mais simples e organizada.
