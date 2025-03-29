@@ -81,7 +81,7 @@ Como apresentado no diagrama de casos de uso da Figura 1, o Administrador poder�
 
 ### 3.4.2 Descrições de Casos de Uso
 
-## Gerenciar Cliente (CSU01)
+### Gerenciar Cliente (CSU01)
 Sumário: O Administrador realiza a gestão (inclusão, remoção, alteração e consulta) dos dados dos clientes.
 
 Ator Primário: Administrador.
@@ -128,7 +128,7 @@ Um cliente foi inserido ou removido, seus dados foram modificados ou exibidos ao
 
 ---
 
-## Consultar Equipamentos (CSU02)
+### Consultar Equipamentos (CSU02)
 
 Sumário: O Cliente e o Administrador consultam a lista de equipamentos cadastrados no sistema, podendo visualizar informações como nome, categoria, especificações e disponibilidade.
 
@@ -158,7 +158,7 @@ A lista de equipamentos foi apresentada com sucesso, e os dados de um ou mais eq
 
 ---
 
-## Gerenciar Equipamentos (CSU03)
+### Gerenciar Equipamentos (CSU03)
 
 Sumário: O Administrador realiza a gestão (inclusão, remoção, alteração e consulta) dos dados dos equipamentos disponíveis no sistema.
 
@@ -176,7 +176,7 @@ Fluxo Principal:
 4. Se desejar continuar o gerenciamento de equipamentos, o caso de uso retorna ao passo 2; caso contrário, o caso de uso é encerrado. <br>
 
 
-Fluxo Alternativo (3): Inclusão
+Fluxo Alternativo (1): Inclusão
 
 a) O Administrador requisita a inclusão de um novo equipamento. <br>
 b) O Sistema solicita um identificador (ex.: código interno) do equipamento. <br>
@@ -185,7 +185,7 @@ d) O Sistema verifica se o equipamento já está cadastrado. Se estiver, informa
 e) O Administrador preenche os dados e confirma a inclusão. <br>
 f) O Sistema valida os dados informados. Se forem válidos, o equipamento é adicionado ao banco de dados e a lista é atualizada; se não forem válidos, o sistema exibe uma mensagem de erro e solicita a correção. <br>
 
-Fluxo Alternativo (3): Remoção
+Fluxo Alternativo (2): Remoção
 
 a) O Administrador seleciona um equipamento da lista e solicita sua exclusão. <br>
 b) O Sistema verifica se o equipamento pode ser removido (ex.: não está associado a aluguéis ativos). <br>
@@ -196,7 +196,7 @@ Fluxo Alternativo (3): Alteração
 a) O Administrador seleciona um equipamento e edita um ou mais campos de seu cadastro. <br>
 b) O Sistema verifica a validade das alterações. Se forem válidas, atualiza os dados; caso contrário, informa o erro. <br>
 
-Fluxo Alternativo (3): Consulta
+Fluxo Alternativo (4): Consulta
 
 a) O Administrador realiza uma busca por nome, código ou categoria. <br>
 b) O Sistema exibe uma lista de equipamentos correspondentes. <br>
@@ -208,7 +208,7 @@ Um equipamento foi inserido ou removido, seus dados foram modificados ou exibido
 
 ---
 
-## Visualizar Status de Disponibilidade (CSU04)
+### Visualizar Status de Disponibilidade (CSU04)
 
 Sumário: O Cliente e o Administrador visualizam o status de disponibilidade dos equipamentos cadastrados no sistema, podendo verificar se estão livres para aluguel ou em uso.
 
@@ -229,7 +229,7 @@ Fluxo Principal:
 7. O ator pode optar por realizar outra consulta ou encerrar o processo. <br>
 
 
-Fluxo Alternativo (3): Sem Filtros Aplicados
+Fluxo Alternativo (1): Sem Filtros Aplicados
 
 a) O Cliente ou o Administrador opta por visualizar todos os equipamentos com seus respectivos status. <br>
 b) O Sistema apresenta a lista completa, indicando a disponibilidade de cada item. <br>
@@ -240,7 +240,7 @@ A disponibilidade dos equipamentos foi consultada com sucesso, e os dados foram 
 
 ---
 
-## Gerenciar Aluguel (CSU05)
+### Gerenciar Aluguel (CSU05)
 
 Sumário: O Administrador realiza a gestão dos aluguéis de equipamentos, incluindo a criação, atualização, finalização e consulta de aluguéis vinculados aos clientes. Durante a inclusão de um novo aluguel, o sistema executa o caso de uso Calcular Valor do Aluguel.
 
@@ -263,13 +263,13 @@ Fluxo Principal:
 9. O Sistema registra a ação e atualiza os dados relacionados ao aluguel e ao equipamento. <br>
 10. O Administrador pode optar por realizar outra operação ou encerrar o processo. <br>
 
-Fluxo Alternativo (3): Finalização de Aluguel
+Fluxo Alternativo (1): Finalização de Aluguel
 
 a) O Administrador seleciona um aluguel ativo e solicita a finalização. <br>
 b) O Sistema solicita a confirmação da devolução do equipamento. <br>
 c) Após confirmação, o Sistema atualiza o status do aluguel para "Finalizado" e o status do equipamento para "Disponível". <br>
 
-Fluxo Alternativo (3): Consulta de Histórico
+Fluxo Alternativo (2): Consulta de Histórico
 
 a) O Administrador realiza busca por cliente, equipamento ou período. <br>
 b) O Sistema apresenta uma lista com os aluguéis correspondentes aos critérios. <br>
@@ -280,7 +280,7 @@ O aluguel foi criado, alterado, finalizado ou consultado com sucesso, e o status
 
 ---
 
-## Calcular Valor do Aluguel (CSU06)
+### Calcular Valor do Aluguel (CSU06)
 
 Sumário: O sistema calcula automaticamente o valor total do aluguel com base no período de locação e nos equipamentos selecionados, incluindo regras de preço e eventuais taxas.
 
@@ -303,7 +303,7 @@ O valor do aluguel é exibido ao Administrador para prosseguimento no processo d
 
 ---
 
-## Visualizar Calendário (CSU07)
+### Visualizar Calendário (CSU07)
 
 Sumário: O Administrador visualiza o calendário com os períodos de locação de cada equipamento, facilitando o controle de disponibilidade e o planejamento de novos aluguéis.
 
@@ -323,7 +323,7 @@ Fluxo Principal:
 6. O Sistema exibe os detalhes da locação correspondente, como cliente, equipamento, data de início e fim. <br>
 7. O Administrador pode optar por continuar navegando no calendário ou encerrar o processo. <br>
 
-Fluxo Alternativo (2): Sem Reservas no Período
+Fluxo Alternativo (1): Sem Reservas no Período
 
 a) O Administrador acessa um período onde não há reservas registradas. <br>
 b) O Sistema exibe o calendário normalmente, com os dias sem marcação de uso. <br>
@@ -334,7 +334,7 @@ O Administrador visualizou o calendário com as informações de uso e disponibi
 
 ---
 
-## Preencher Formulário de Contato (CSU08)
+### Preencher Formulário de Contato (CSU08)
 
 Sumário: O Cliente preenche um formulário de contato para solicitar informações adicionais, tirar dúvidas ou pedir retorno da empresa responsável pela locação dos equipamentos.
 
@@ -354,7 +354,7 @@ Fluxo Principal:
 6. Se os dados forem válidos, o Sistema registra a solicitação e exibe uma mensagem de confirmação. <br>
 7. O Cliente pode optar por preencher um novo formulário ou encerrar o processo. <br>
 
-Fluxo Alternativo (5): Dados Inválidos
+Fluxo Alternativo (1): Dados Inválidos
 
 a) O Sistema identifica campos obrigatórios não preenchidos ou dados inválidos. <br>
 b) O Sistema exibe uma mensagem de erro solicitando a correção. <br>
@@ -365,7 +365,7 @@ A solicitação de contato foi registrada com sucesso e estará disponível para
 
 ---
 
-## Registrar Reservas Futuras (CSU09)
+### Registrar Reservas Futuras (CSU09)
 
 Sumário: O Administrador registra reservas de equipamentos para datas futuras, garantindo a disponibilidade dos itens para os clientes com antecedência.
 
@@ -385,7 +385,7 @@ Fluxo Principal:
 6. O Sistema exibe uma mensagem de confirmação com os dados da reserva. <br>
 7. O Administrador pode optar por registrar outra reserva ou encerrar o processo. <br>
 
-Fluxo Alternativo (4): Equipamento Indisponível
+Fluxo Alternativo (1): Equipamento Indisponível
 
 a) O Sistema identifica que o equipamento já está reservado ou alugado para o período informado. <br>
 b) O Sistema exibe uma mensagem informando a indisponibilidade. <br>
@@ -396,7 +396,7 @@ Uma reserva futura foi registrada com sucesso e o equipamento ficou indisponíve
 
 ---
 
-## Gerenciar Manutenção (CSU10)
+### Gerenciar Manutenção (CSU10)
 
 Sumário: O Administrador realiza o controle de manutenções dos equipamentos, podendo registrar novas manutenções, atualizar status e consultar o histórico de intervenções.
 
@@ -417,7 +417,7 @@ Fluxo Principal:
 7. Se válidas, o Sistema executa a ação e atualiza o status do equipamento (ex.: Em manutenção, Disponível, etc.). <br>
 8. O Administrador pode optar por realizar outra operação ou encerrar o processo. <br>
 
-Fluxo Alternativo (5): Dados Inválidos
+Fluxo Alternativo (1): Dados Inválidos
 
 a) O Sistema identifica que dados obrigatórios estão ausentes ou inválidos. <br>
 b) O Sistema informa o erro ao Administrador e solicita a correção. <br>
@@ -428,7 +428,7 @@ Uma nova manutenção foi registrada, uma manutenção existente foi atualizada 
 
 ---
 
-## Exibir Gráfico de Quantidade de Aluguéis por Dia (CSU11)
+### Exibir Gráfico de Quantidade de Aluguéis por Dia (CSU11)
 
 Sumário: O Administrador visualiza um gráfico com a quantidade de aluguéis realizados por dia, auxiliando na análise de desempenho e no planejamento da operação.
 
@@ -447,7 +447,7 @@ Fluxo Principal:
 5. O Sistema exibe o gráfico de barras ou linhas representando a quantidade de aluguéis por dia no período selecionado. <br>
 6. O Administrador analisa as informações e pode optar por exportar os dados, alterar os filtros ou encerrar o processo. <br>
 
-Fluxo Alternativo (5): Sem Dados no Período
+Fluxo Alternativo (1): Sem Dados no Período
 
 a) O Sistema identifica que não há aluguéis registrados no intervalo selecionado. <br>
 b) O Sistema exibe uma mensagem informando a ausência de dados. <br>
@@ -458,7 +458,7 @@ O gráfico foi exibido com sucesso, permitindo ao Administrador analisar o volum
 
 ---
 
-## Filtrar Aluguéis por Status (CSU12)
+### Filtrar Aluguéis por Status (CSU12)
 
 Sumário: O Administrador filtra a lista de aluguéis com base no status atual (ativo, finalizado, reservado, cancelado), facilitando a gestão e análise das locações.
 
@@ -477,7 +477,7 @@ Fluxo Principal:
 5. O Sistema exibe a lista resultante com os aluguéis que possuem o(s) status selecionado(s). <br>
 6. O Administrador pode visualizar detalhes de um aluguel, aplicar novos filtros ou encerrar o processo. <br>
 
-Fluxo Alternativo (5): Nenhum Aluguel com o Status Selecionado
+Fluxo Alternativo (1): Nenhum Aluguel com o Status Selecionado
 
 a) O Sistema identifica que não existem aluguéis com o status informado. <br>
 b) O Sistema exibe uma mensagem informando que não há resultados. <br>
@@ -488,7 +488,7 @@ O Administrador obteve uma lista filtrada de aluguéis conforme o status selecio
 
 ---
 
-## Exibir Gráfico de Total de Aluguéis por Equipamentos (CSU13)
+### Exibir Gráfico de Total de Aluguéis por Equipamentos (CSU13)
 
 Sumário: O Administrador visualiza um gráfico com o total de aluguéis realizados por cada equipamento, facilitando a análise de demanda e o controle de uso dos itens.
 
@@ -507,7 +507,7 @@ Fluxo Principal:
 5. O Sistema exibe um gráfico (de barras, pizza ou linhas) representando o total de aluguéis realizados por equipamento no período selecionado. <br>
 6. O Administrador analisa as informações apresentadas e pode exportar o gráfico, modificar os filtros ou encerrar o processo. <br>
 
-Fluxo Alternativo (5): Sem Dados no Período
+Fluxo Alternativo (1): Sem Dados no Período
 
 a) O Sistema identifica que não há aluguéis registrados para os equipamentos no período informado. <br>
 b) O Sistema exibe uma mensagem informando a ausência de dados. <br>
@@ -518,7 +518,7 @@ O gráfico com o total de aluguéis por equipamento foi exibido ao Administrador
 
 ---
 
-## Consultar Histórico de Aluguéis por Cliente (CSU14)
+### Consultar Histórico de Aluguéis por Cliente (CSU14)
 
 Sumário: O Administrador consulta o histórico de aluguéis realizados por um cliente específico, permitindo o acompanhamento do relacionamento e uso dos equipamentos ao longo do tempo.
 
@@ -538,7 +538,7 @@ Fluxo Principal:
 6. O Sistema exibe os dados detalhados da locação, como período, valor, status e observações. <br>
 7. O Administrador pode consultar outro cliente, aplicar filtros adicionais ou encerrar o processo. <br>
 
-Fluxo Alternativo (4): Cliente sem Histórico de Aluguéis
+Fluxo Alternativo (1): Cliente sem Histórico de Aluguéis
 
 a) O Sistema identifica que o cliente não possui registros de aluguéis. <br>
 b) O Sistema exibe uma mensagem informando que não há histórico para o cliente informado. <br>
@@ -549,7 +549,7 @@ O histórico de aluguéis do cliente foi exibido ao Administrador com sucesso, o
 
 ---
 
-## Realizar Login (CSU15)
+### Realizar Login (CSU15)
 
 Sumário: O Administrador realiza a autenticação no sistema por meio de login e senha, obtendo acesso às funcionalidades disponíveis conforme seu perfil.
 
@@ -568,7 +568,7 @@ Fluxo Principal:
 5. Se os dados estiverem corretos, o Sistema autentica o Administrador e redireciona para a tela inicial com acesso às funcionalidades autorizadas. <br>
 6. O Administrador passa a interagir com o sistema como usuário autenticado. <br>
 
-Fluxo Alternativo (4): Credenciais Inválidas
+Fluxo Alternativo (1): Credenciais Inválidas
 
 a) O Sistema identifica que o login ou a senha estão incorretos. <br>
 b) O Sistema exibe uma mensagem de erro solicitando nova tentativa. <br>
@@ -579,7 +579,7 @@ O Administrador foi autenticado com sucesso e teve acesso ao sistema, ou foi inf
 
 ---
 
-## Realizar Logout (CSU16)
+### Realizar Logout (CSU16)
 
 Sumário: O Administrador encerra sua sessão no sistema de forma segura, finalizando o acesso às funcionalidades restritas.
 
@@ -596,7 +596,7 @@ Fluxo Principal:
 3. O Administrador confirma a intenção de encerrar a sessão. <br>
 4. O Sistema finaliza a sessão ativa e redireciona o Administrador para a tela de login ou página inicial pública. <br>
 
-Fluxo Alternativo (2): Cancelamento de Logout
+Fluxo Alternativo (1): Cancelamento de Logout
 
 a) O Administrador decide cancelar a ação de logout. <br>
 b) O Sistema mantém a sessão ativa e retorna para a interface anterior. <br>
@@ -606,7 +606,7 @@ A sessão foi encerrada com sucesso, e o Administrador não possui mais acesso �
 
 ---
 
-## Permitir Consulta de Relatório de Quantidade de Aluguel por Dia (CSU17)
+### Permitir Consulta de Relatório de Quantidade de Aluguel por Dia (CSU17)
 
 Sumário: O Administrador consulta um relatório que apresenta a quantidade de aluguéis realizados por dia dentro de um determinado período, facilitando a análise operacional.
 
@@ -625,7 +625,7 @@ Fluxo Principal:
 5. O Sistema exibe o relatório com a quantidade de aluguéis agrupados por dia. <br>
 6. O Administrador pode optar por exportar o relatório, imprimir, modificar os filtros ou encerrar o processo. <br>
 
-Fluxo Alternativo (5): Período Sem Dados
+Fluxo Alternativo (1): Período Sem Dados
 
 a) O Sistema identifica que não há aluguéis registrados no período informado. <br>
 b) O Sistema exibe uma mensagem informando a ausência de dados no relatório. <br>
@@ -636,7 +636,7 @@ O relatório com a quantidade de aluguéis por dia foi exibido ao Administrador 
 
 ---
 
-## Permitir Consulta de Relatório de Total de Aluguéis dos Equipamentos (CSU18)
+### Permitir Consulta de Relatório de Total de Aluguéis dos Equipamentos (CSU18)
 
 Sumário: O Administrador consulta um relatório que apresenta o total de aluguéis realizados para cada equipamento, permitindo identificar os itens mais utilizados ao longo do tempo.
 
@@ -655,7 +655,7 @@ Fluxo Principal:
 5. O Sistema exibe o relatório com o total de aluguéis realizados para cada equipamento no período informado. <br>
 6. O Administrador pode exportar, imprimir, aplicar novos filtros ou encerrar a consulta. <br>
 
-Fluxo Alternativo (5): Sem Registros Encontrados
+Fluxo Alternativo (1): Sem Registros Encontrados
 
 a) O Sistema identifica que nenhum aluguel foi realizado com os critérios informados. <br>
 b) O Sistema exibe uma mensagem informando que não há dados disponíveis para gerar o relatório. <br>
