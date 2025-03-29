@@ -3,27 +3,39 @@
 Nesta parte do trabalho você deve detalhar a documentação dos requisitos do sistema proposto de acordo com as seções a seguir. Ressalta-se que aqui é utilizado como exemplo um sistema de gestão de cursos de aperfeiçoamento.
 
 ## 3.1 Objetivos deste documento
-Descrever e especificar as necessidades da empresa de aluguel de equipamentos e máquinas e de seus clientes, que devem ser atendidas pelo sistema Obra Certa.
+Este documento tem como objetivo descrever e especificar os requisitos funcionais e não funcionais do sistema Obra Certa, atendendo às necessidades da empresa de aluguel de equipamentos e máquinas, bem como de seus clientes. Ele servirá como base para o desenvolvimento e validação do sistema, garantindo que as funcionalidades essenciais para a operação sejam contempladas.
 
 ## 3.2 Escopo do produto
 
 ### 3.2.1 Nome do produto e seus componentes principais
-O produto será denominado SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento. Ele terá somente um componente (módulo) com os devidos elementos necessários à gestão de cursos.
+O sistema será denominado Obra Certa – Sistema de Aluguel e Gerenciamento de Equipamentos. Seus principais módulos incluem:
+
+    Gerenciamento de Equipamentos
+
+    Gerenciamento de Clientes
+
+    Controle de Manutenções
+
+Esses módulos fornecerão suporte completo para a operação de aluguel de maquinário, desde o cadastro e acompanhamento dos equipamentos até o relacionamento com os clientes e a manutenção dos ativos.
 
 ### 3.2.2 Missão do produto
-Gerenciar informações sobre a oferta de cursos de aperfeiçoamento, gerenciar a composição das turmas, alunos, professores e matrículas.
+O Obra Certa tem como missão otimizar o processo de aluguel de equipamentos, promovendo maior eficiência na gestão dos recursos, maior controle operacional e melhor experiência para os usuários da empresa.
 
 ### 3.2.3 Limites do produto
-O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcelas do curso, pagamento a professore e agendamentos. O SCCA não contempla o atendimento a vários cursos de Sistemas de Informação de outras unidades da PUC Minas.
+O sistema Obra Certa é voltado exclusivamente para a gestão de aluguéis de equipamentos e máquinas. Ele não contempla funcionalidades relacionadas à venda de equipamentos, limitando-se à operação de locação e controle de manutenção.
 
 ### 3.2.4 Benefícios do produto
 
-| #   | Benefício                                | Valor para o Cliente |
-| --- | ---------------------------------------- | -------------------- |
-| 1   | Facilidade no cadastro de dados          | Essencial            |
-| 2   | Facilidade na recuperação de informações | Essencial            |
-| 3   | Segurança no cadastro de matrículas      | Essencial            |
-| 4   | Melhoria na comunicação com os alunos    | Recomendável         |
+| #   | Benefício                                                           | Valor para o Cliente |
+| --- | ------------------------------------------------------------------- | -------------------- |
+| 1   | Facilidade no cadastro de clientes e equipamentos                   | Essencial            |
+| 2   | Agilidade na recuperação de informações e históricos                | Essencial            |
+| 3   | Maior controle sobre a disponibilidade dos equipamentos             | Essencial            |
+| 4   | Redução de erros manuais nas operações de aluguel                   | Essencial            |
+| 5   | Visão clara de dados operacionais por meio de relatórios e gráficos | Recomendável         |
+| 6   | Comunicação facilitada com os clientes via formulário               | Recomendável         |
+| 7   | Registro e acompanhamento de manutenções                            | Essencial            |
+| 8   | Planejamento eficiente com visualização de calendário               | Recomendável         |
 
 ## 3.3 Descrição geral do produto
 
