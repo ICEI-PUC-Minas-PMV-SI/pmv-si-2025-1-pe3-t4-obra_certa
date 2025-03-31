@@ -16,13 +16,15 @@ O sistema será denominado Obra Certa – Sistema de Aluguel e Gerenciamento de 
 
     Controle de Manutenções
 
+    Análise de locações 
+
 Esses módulos fornecerão suporte completo para a operação de aluguel de maquinário, desde o cadastro e acompanhamento dos equipamentos até o relacionamento com os clientes e a manutenção dos ativos.
 
 ### 3.2.2 Missão do produto
 O Obra Certa tem como missão otimizar o processo de aluguel de equipamentos, promovendo maior eficiência na gestão dos recursos, maior controle operacional e melhor experiência para os usuários da empresa.
 
 ### 3.2.3 Limites do produto
-O sistema Obra Certa é voltado exclusivamente para a gestão de aluguéis de equipamentos e máquinas. Ele não contempla funcionalidades relacionadas à venda de equipamentos, limitando-se à operação de locação e controle de manutenção.
+O sistema Obra Certa é voltado exclusivamente para a gestão de aluguéis de equipamentos e máquinas, tendo enfoque maior no auxílio à empresa. Ele não contempla funcionalidades relacionadas à venda de equipamentos, limitando-se à operação de locação e controle de manutenção.
 
 ### 3.2.4 Benefícios do produto
 
