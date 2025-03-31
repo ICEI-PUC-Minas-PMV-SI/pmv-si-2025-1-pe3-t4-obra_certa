@@ -62,7 +62,7 @@ O sistema Obra Certa é voltado exclusivamente para a gestão de aluguéis de eq
 | RF15   | Consultar histórico de aluguéis por cliente                           | Visualizar histórico completo de aluguéis realizados por cliente específico                                              |
 | RF16   | Realizar login                                                        | Permitir que o admin do sistema (funcionário da empresa) consiga logar no sistema admin, com credenciais pré-cadastradas |
 | RF17   | Realizar logout                                                       | Permitir que o admin do sistema (funcionário da empresa) consiga deslogar do sistema admin                               |
-| RF18   | Emitir relatórios     | Permitir emissão de relatórios de de quantidade de aluguéis por dia e de total de aluguéis dos equipamentos |
+| RF18   | Emitir relatórios     | Permitir emissão de relatórios de quantidade de aluguéis por dia e de total de aluguéis dos equipamentos |
 
 ### 3.3.2 Requisitos Não Funcionais
 
