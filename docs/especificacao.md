@@ -54,7 +54,7 @@ O sistema Obra Certa é voltado exclusivamente para a gestão de aluguéis de eq
 | RF7    | Visualizar status de disponibilidade                                  | Mostrar o status de disponibilidade dos equipamentos                                                                     |
 | RF8    | Visualizar calendário                                                 | Exibir calendário com datas disponíveis para cada equipamento                                                            |
 | RF9    | Cálcular valor de aluguel                                             | Calcular automaticamente o valor total do aluguel com base no tempo e valor de cada equipamento                          |
-| RF10   | Registrar reservas futuras                                            | Permitir o registro de reservas futuras de equipamentos                                                                  |
+| RF10   | Gerenciar Reservas                                            | Processamento de Inclusão, Alteração, Exclusão de reservas de equipamentos                                                                  |
 | RF11   | Filtrar aluguéis por status                                           | Implementar filtros de aluguéis por status para o administrador                                                          |
 | RF12   | Exibir gráfico de quantidade de aluguéis por dia                      | Exibir gráficos de quantidade de aluguéis realizados por dia, na página inicial do painel admin                          |
 | RF13   | Exibir gráfico de total de aluguéis dos equipamentos                  | Exibir gráficos com o número total de vezes que cada equipamento foi alugado, na página inicial do painel admin          |
@@ -62,8 +62,7 @@ O sistema Obra Certa é voltado exclusivamente para a gestão de aluguéis de eq
 | RF15   | Consultar histórico de aluguéis por cliente                           | Visualizar histórico completo de aluguéis realizados por cliente específico                                              |
 | RF16   | Realizar login                                                        | Permitir que o admin do sistema (funcionário da empresa) consiga logar no sistema admin, com credenciais pré-cadastradas |
 | RF17   | Realizar logout                                                       | Permitir que o admin do sistema (funcionário da empresa) consiga deslogar do sistema admin                               |
-| RF18   | Permitir consulta de relatórios de quantidade de aluguéis por dia     | Exibir relatório de quantidade de aluguéis realizados por dia                                                            |
-| RF19   | Permitir consulta de relatórios de total de aluguéis dos equipamentos | Exibir relatório com o número total de vezes que cada equipamento foi alugado                                            |
+| RF18   | Emitir relatórios     | Permitir emissão de relatórios de de quantidade de aluguéis por dia e de total de aluguéis dos equipamentos |
 
 ### 3.3.2 Requisitos Não Funcionais
 
