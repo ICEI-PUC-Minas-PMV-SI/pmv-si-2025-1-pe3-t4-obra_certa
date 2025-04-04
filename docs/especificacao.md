@@ -16,7 +16,7 @@ O sistema será denominado Obra Certa – Sistema de Aluguel e Gerenciamento de 
 
     Controle de Manutenções
 
-    Análise de locações 
+    Análise de locações
 
 Esses módulos fornecerão suporte completo para a operação de aluguel de maquinário, desde o cadastro e acompanhamento dos equipamentos até o relacionamento com os clientes e a manutenção dos ativos.
 
@@ -43,26 +43,26 @@ O sistema Obra Certa é voltado exclusivamente para a gestão de aluguéis de eq
 
 ### 3.3.1 Requisitos Funcionais
 
-| Código | Requisito Funcional (Funcionalidade)                                  | Descrição                                                                                                                |
-| ------ | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| RF1    | Gerenciar Clientes                                                    | Processamento de Inclusão, Alteração, Exclusão e Consulta de clientes                                                    |
-| RF2    | Gerenciar Equipamentos                                                | Processamento de Inclusão, Alteração, Exclusão de equipamentos                                                           |
-| RF3    | Consultar Equipamentos                                                | Processamento de Consulta de equipamentos                                                                                |
-| RF4    | Gerenciar Aluguel                                                     | Processamento de Inclusão, Alteração, Exclusão e Consulta de aluguéis                                                    |
-| RF5    | Gerenciar Manutenções                                                 | Processamento de Inclusão, Alteração, Exclusão e Consulta de manutenções dos equipamentos                                |
-| RF6    | Filtrar equipamentos                                                  | Implementar filtros de equipamentos por tipo/categoria                                                                   |
-| RF7    | Visualizar status de disponibilidade                                  | Mostrar o status de disponibilidade dos equipamentos                                                                     |
-| RF8    | Visualizar calendário                                                 | Exibir calendário com datas disponíveis para cada equipamento                                                            |
-| RF9    | Cálcular valor de aluguel                                             | Calcular automaticamente o valor total do aluguel com base no tempo e valor de cada equipamento                          |
-| RF10   | Gerenciar Reservas                                            | Processamento de Inclusão, Alteração, Exclusão de reservas de equipamentos                                                                  |
-| RF11   | Filtrar aluguéis por status                                           | Implementar filtros de aluguéis por status para o administrador                                                          |
-| RF12   | Exibir gráfico de quantidade de aluguéis por dia                      | Exibir gráficos de quantidade de aluguéis realizados por dia, na página inicial do painel admin                          |
-| RF13   | Exibir gráfico de total de aluguéis dos equipamentos                  | Exibir gráficos com o número total de vezes que cada equipamento foi alugado, na página inicial do painel admin          |
-| RF14   | Disponibilizar formulário para contato                                | Disponibilizar formulário de contato para solicitações de clientes, na landing page                                      |
-| RF15   | Consultar histórico de aluguéis por cliente                           | Visualizar histórico completo de aluguéis realizados por cliente específico                                              |
-| RF16   | Realizar login                                                        | Permitir que o admin do sistema (funcionário da empresa) consiga logar no sistema admin, com credenciais pré-cadastradas |
-| RF17   | Realizar logout                                                       | Permitir que o admin do sistema (funcionário da empresa) consiga deslogar do sistema admin                               |
-| RF18   | Emitir relatórios     | Permitir emissão de relatórios de quantidade de aluguéis por dia e de total de aluguéis dos equipamentos |
+| Código | Requisito Funcional (Funcionalidade)                 | Descrição                                                                                                                |
+| ------ | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| RF1    | Gerenciar Clientes                                   | Processamento de Inclusão, Alteração, Exclusão e Consulta de clientes                                                    |
+| RF2    | Gerenciar Equipamentos                               | Processamento de Inclusão, Alteração, Exclusão de equipamentos                                                           |
+| RF3    | Consultar Equipamentos                               | Processamento de Consulta de equipamentos                                                                                |
+| RF4    | Gerenciar Aluguel                                    | Processamento de Inclusão, Alteração, Exclusão e Consulta de aluguéis                                                    |
+| RF5    | Gerenciar Manutenções                                | Processamento de Inclusão, Alteração, Exclusão e Consulta de manutenções dos equipamentos                                |
+| RF6    | Filtrar equipamentos                                 | Implementar filtros de equipamentos por tipo/categoria                                                                   |
+| RF7    | Visualizar status de disponibilidade                 | Mostrar o status de disponibilidade dos equipamentos                                                                     |
+| RF8    | Visualizar calendário                                | Exibir calendário com datas disponíveis para cada equipamento                                                            |
+| RF9    | Cálcular valor de aluguel                            | Calcular automaticamente o valor total do aluguel com base no tempo e valor de cada equipamento                          |
+| RF10   | Gerenciar Reservas                                   | Processamento de Inclusão, Alteração, Exclusão de reservas de equipamentos                                               |
+| RF11   | Filtrar aluguéis por status                          | Implementar filtros de aluguéis por status para o administrador                                                          |
+| RF12   | Exibir gráfico de quantidade de aluguéis por dia     | Exibir gráficos de quantidade de aluguéis realizados por dia, na página inicial do painel admin                          |
+| RF13   | Exibir gráfico de total de aluguéis dos equipamentos | Exibir gráficos com o número total de vezes que cada equipamento foi alugado, na página inicial do painel admin          |
+| RF14   | Preencher formulário de contato                      | Disponibilizar formulário de contato para solicitações de clientes, na landing page                                      |
+| RF15   | Consultar histórico de aluguéis por cliente          | Visualizar histórico completo de aluguéis realizados por cliente específico                                              |
+| RF16   | Realizar login                                       | Permitir que o admin do sistema (funcionário da empresa) consiga logar no sistema admin, com credenciais pré-cadastradas |
+| RF17   | Realizar logout                                      | Permitir que o admin do sistema (funcionário da empresa) consiga deslogar do sistema admin                               |
+| RF18   | Emitir relatórios                                    | Permitir emissão de relatórios de quantidade de aluguéis por dia e de total de aluguéis dos equipamentos                 |
 
 ### 3.3.2 Requisitos Não Funcionais
 
@@ -221,39 +221,7 @@ Um equipamento foi inserido ou removido, seus dados foram modificados ou exibido
 
 ---
 
-### Visualizar Status de Disponibilidade (CSU04)
-
-Sumário: O Cliente e o Administrador visualizam o status de disponibilidade dos equipamentos cadastrados no sistema, podendo verificar se estão livres para aluguel ou em uso.
-
-Atores Primários: Cliente, Administrador.
-
-Atores Secundários: — (não se aplica).
-
-Pré-condições: O Cliente ou o Administrador deve estar autenticado no sistema.
-
-Fluxo Principal:
-
-1. O Cliente ou o Administrador acessa a funcionalidade de visualização de disponibilidade. <br>
-2. O Sistema apresenta uma interface de busca e filtro com opções como nome do equipamento, categoria ou status atual. <br>
-3. O ator aplica os filtros desejados e confirma a pesquisa. <br>
-4. O Sistema exibe uma lista de equipamentos com seus respectivos status de disponibilidade (Disponível, Reservado, Em uso, Em manutenção etc.). <br>
-5. O ator pode selecionar um equipamento da lista para obter mais detalhes. <br>
-6. O Sistema exibe os dados detalhados, incluindo o status atualizado e informações relevantes (último aluguel, próxima devolução, etc.). <br>
-7. O ator pode optar por realizar outra consulta ou encerrar o processo. <br>
-
-
-Fluxo Alternativo (1): Sem Filtros Aplicados
-
-a) O Cliente ou o Administrador opta por visualizar todos os equipamentos com seus respectivos status. <br>
-b) O Sistema apresenta a lista completa, indicando a disponibilidade de cada item. <br>
-c) O fluxo segue a partir do passo 5 do fluxo principal. <br>
-
-Pós-condições:
-A disponibilidade dos equipamentos foi consultada com sucesso, e os dados foram exibidos ao ator.
-
----
-
-### Gerenciar Aluguel (CSU05)
+### Gerenciar Aluguel (CSU04)
 
 Sumário: O Administrador realiza a gestão dos aluguéis de equipamentos, incluindo a criação, atualização, finalização e consulta de aluguéis vinculados aos clientes. Durante a inclusão de um novo aluguel, o sistema executa o caso de uso Calcular Valor do Aluguel.
 
@@ -293,7 +261,113 @@ O aluguel foi criado, alterado, finalizado ou consultado com sucesso, e o status
 
 ---
 
-### Calcular Valor do Aluguel (CSU06)
+### Gerenciar Manutenções (CSU05)
+Sumário: O Administrador realiza a gestão (inclusão, alteração, finalização e consulta) das manutenções de equipamentos cadastrados no sistema.
+
+Ator Primário: Administrador.
+
+Ator Secundário: Técnico de Manutenção (opcional).
+
+Pré-condições: O Administrador deve estar autenticado no sistema.
+
+Fluxo Principal:
+1) O Administrador acessa a funcionalidade de gerenciamento de manutenções. <br>
+2) O Sistema apresenta as operações disponíveis: abertura de nova manutenção, alteração de manutenção em andamento, finalização de manutenção e consulta de registros. <br>
+3) O Administrador seleciona a operação desejada: Inclusão, Alteração, Finalização ou Consulta, ou opta por finalizar o caso de uso. <br>
+4) Se desejar continuar o gerenciamento de manutenções, o caso de uso retorna ao passo 2; caso contrário, o caso de uso é encerrado. <br>
+
+Fluxo Alternativo (1): Inclusão
+a) O Administrador requisita a inclusão de uma nova manutenção. <br>
+b) O Sistema solicita o código ou identificação do equipamento. <br>
+c) O Administrador fornece o dado solicitado. <br>
+d) O Sistema verifica se o equipamento está disponível para manutenção (ex.: não está alugado). <br>
+e) Se estiver disponível, o Sistema apresenta um formulário com os campos necessários (descrição do problema, data prevista, tipo de manutenção, técnico responsável, etc.). <br>
+f) O Administrador preenche os dados e confirma a inclusão. <br>
+g) O Sistema valida os dados informados. Se forem válidos, a manutenção é registrada e o status do equipamento é alterado para "Em manutenção"; caso contrário, o sistema exibe uma mensagem de erro e solicita a correção. <br>
+
+Fluxo Alternativo (2): Alteração
+a) O Administrador seleciona uma manutenção em andamento e opta por editar os dados. <br>
+b) O Sistema permite a alteração dos campos editáveis (ex.: data prevista, observações, técnico responsável). <br>
+c) O Administrador realiza as alterações e confirma. <br>
+d) O Sistema valida e salva os novos dados; se houver erro, informa o Administrador. <br>
+
+Fluxo Alternativo (3): Finalização
+a) O Administrador seleciona uma manutenção ativa e opta por finalizá-la. <br>
+b) O Sistema solicita a confirmação do término e, se necessário, a descrição final do serviço realizado. <br>
+c) O Administrador confirma a finalização. <br>
+d) O Sistema atualiza o status da manutenção para “Concluída” e altera o status do equipamento para “Disponível”. <br>
+
+Fluxo Alternativo (4): Consulta
+a) O Administrador realiza uma busca por data, tipo, status ou equipamento. <br>
+b) O Sistema exibe uma lista com os registros de manutenção correspondentes. <br>
+c) O Administrador seleciona um registro. <br>
+d) O Sistema exibe os dados detalhados da manutenção selecionada. <br>
+
+Pós-condições: Uma manutenção foi registrada, alterada, finalizada ou consultada, e o status do equipamento foi atualizado conforme a operação realizada.
+
+---
+
+### Filtrar Equipamentos (CSU06)
+Sumário: O Administrador aplica filtros na listagem de equipamentos para localizar itens com base em critérios específicos como nome, tipo, status ou disponibilidade.
+
+Ator Primário: Administrador.
+
+Ator Secundário: — (não se aplica neste caso).
+
+Pré-condições: O Administrador deve estar autenticado no sistema.
+
+Fluxo Principal:
+1) O Administrador acessa a funcionalidade de consulta ou listagem de equipamentos. <br>
+2) O Sistema exibe os campos de filtragem disponíveis (ex.: nome, tipo, status, disponibilidade, código do equipamento). <br>
+3) O Administrador preenche um ou mais critérios de busca. <br>
+4) O Sistema realiza a busca com base nos filtros aplicados. <br>
+5) O Sistema exibe os equipamentos que correspondem aos critérios informados. <br>
+6) O Administrador pode selecionar um equipamento da lista para visualizar mais detalhes. <br>
+
+Fluxo Alternativo (1): Nenhum resultado encontrado
+a) O Administrador aplica filtros que não retornam resultados. <br>
+b) O Sistema informa que nenhum equipamento foi encontrado com os critérios selecionados. <br>
+c) O Administrador pode ajustar os filtros e realizar uma nova busca. <br>
+
+Pós-condições: O Administrador visualizou uma lista de equipamentos conforme os critérios de filtragem aplicados e, se desejado, acessou os detalhes de um ou mais itens.
+
+---
+
+### Visualizar Status de Disponibilidade (CSU07)
+
+Sumário: O Cliente e o Administrador visualizam o status de disponibilidade dos equipamentos cadastrados no sistema, podendo verificar se estão livres para aluguel ou em uso.
+
+Atores Primários: Cliente, Administrador.
+
+Atores Secundários: — (não se aplica).
+
+Pré-condições: O Cliente ou o Administrador deve estar autenticado no sistema.
+
+Fluxo Principal:
+
+1. O Cliente ou o Administrador acessa a funcionalidade de visualização de disponibilidade. <br>
+2. O Sistema apresenta uma interface de busca e filtro com opções como nome do equipamento, categoria ou status atual. <br>
+3. O ator aplica os filtros desejados e confirma a pesquisa. <br>
+4. O Sistema exibe uma lista de equipamentos com seus respectivos status de disponibilidade (Disponível, Reservado, Em uso, Em manutenção etc.). <br>
+5. O ator pode selecionar um equipamento da lista para obter mais detalhes. <br>
+6. O Sistema exibe os dados detalhados, incluindo o status atualizado e informações relevantes (último aluguel, próxima devolução, etc.). <br>
+7. O ator pode optar por realizar outra consulta ou encerrar o processo. <br>
+
+
+Fluxo Alternativo (1): Sem Filtros Aplicados
+
+a) O Cliente ou o Administrador opta por visualizar todos os equipamentos com seus respectivos status. <br>
+b) O Sistema apresenta a lista completa, indicando a disponibilidade de cada item. <br>
+c) O fluxo segue a partir do passo 5 do fluxo principal. <br>
+
+Pós-condições:
+A disponibilidade dos equipamentos foi consultada com sucesso, e os dados foram exibidos ao ator.
+
+---
+
+
+
+### Calcular Valor do Aluguel (CSU08)
 
 Sumário: O sistema calcula automaticamente o valor total do aluguel com base no período de locação e nos equipamentos selecionados, incluindo regras de preço e eventuais taxas.
 
@@ -316,7 +390,53 @@ O valor do aluguel é exibido ao Administrador para prosseguimento no processo d
 
 ---
 
-### Visualizar Calendário (CSU07)
+### Gerenciar Reservas (CSU09)
+Sumário: O Administrador realiza a gestão (inclusão, alteração, cancelamento e consulta) das reservas de equipamentos feitas pelos clientes.
+
+Ator Primário: Administrador.
+
+Ator Secundário: — (não se aplica neste caso).
+
+Pré-condições: O Administrador deve estar autenticado no sistema.
+
+Fluxo Principal:
+1) O Administrador acessa a funcionalidade de gerenciamento de reservas. <br>
+2) O Sistema apresenta as operações disponíveis: inclusão de nova reserva, alteração de reserva existente, cancelamento e consulta de reservas. <br>
+3) O Administrador seleciona a operação desejada: Inclusão, Alteração, Cancelamento ou Consulta, ou opta por finalizar o caso de uso. <br>
+4) Se desejar continuar o gerenciamento de reservas, o caso de uso retorna ao passo 2; caso contrário, o caso de uso é encerrado. <br>
+
+Fluxo Alternativo (1): Inclusão
+a) O Administrador requisita a inclusão de uma nova reserva. <br>
+b) O Sistema solicita os dados do cliente e os equipamentos desejados. <br>
+c) O Administrador fornece as informações e define o período da reserva. <br>
+d) O Sistema verifica a disponibilidade dos equipamentos para o período informado. <br>
+e) Se estiverem disponíveis, o Sistema apresenta um resumo da reserva para confirmação. <br>
+f) O Administrador confirma a inclusão. <br>
+g) O Sistema valida os dados e registra a reserva; os equipamentos são marcados como "Reservados" para o período correspondente. <br>
+
+Fluxo Alternativo (2): Alteração
+a) O Administrador seleciona uma reserva ativa e opta por editar seus dados. <br>
+b) O Sistema permite alterações como datas, equipamentos ou dados do cliente. <br>
+c) O Administrador confirma as alterações. <br>
+d) O Sistema valida e salva as informações atualizadas. <br>
+
+Fluxo Alternativo (3): Cancelamento
+a) O Administrador seleciona uma reserva ativa e solicita o cancelamento. <br>
+b) O Sistema solicita a confirmação da ação. <br>
+c) O Administrador confirma o cancelamento. <br>
+d) O Sistema cancela a reserva e libera os equipamentos anteriormente reservados. <br>
+
+Fluxo Alternativo (4): Consulta
+a) O Administrador realiza uma busca por nome do cliente, data, código da reserva ou status. <br>
+b) O Sistema exibe uma lista de reservas correspondentes aos critérios. <br>
+c) O Administrador seleciona uma reserva da lista. <br>
+d) O Sistema exibe os dados detalhados da reserva selecionada. <br>
+
+Pós-condições: Uma reserva foi criada, alterada, cancelada ou consultada, com os equipamentos devidamente atualizados quanto ao seu status de disponibilidade.
+
+---
+
+### Visualizar Calendário (CSU10)
 
 Sumário: O Administrador visualiza o calendário com os períodos de locação de cada equipamento, facilitando o controle de disponibilidade e o planejamento de novos aluguéis.
 
@@ -347,7 +467,7 @@ O Administrador visualizou o calendário com as informações de uso e disponibi
 
 ---
 
-### Preencher Formulário de Contato (CSU08)
+### Preencher Formulário de Contato (CSU11)
 
 Sumário: O Cliente preenche um formulário de contato para solicitar informações adicionais, tirar dúvidas ou pedir retorno da empresa responsável pela locação dos equipamentos.
 
@@ -378,70 +498,7 @@ A solicitação de contato foi registrada com sucesso e estará disponível para
 
 ---
 
-### Registrar Reservas Futuras (CSU09)
-
-Sumário: O Administrador registra reservas de equipamentos para datas futuras, garantindo a disponibilidade dos itens para os clientes com antecedência.
-
-Atores Primários: Administrador.
-
-Atores Secundários: — (não se aplica).
-
-Pré-condições: O Administrador deve estar autenticado no sistema.
-
-Fluxo Principal:
-
-1. O Administrador acessa a funcionalidade de registro de reservas futuras. <br>
-2. O Sistema exibe um formulário solicitando as informações da reserva: cliente, equipamento, data de início e data de término. <br>
-3. O Administrador preenche os campos obrigatórios e confirma a solicitação. <br>
-4. O Sistema verifica a disponibilidade do equipamento para o período selecionado. <br>
-5. Se disponível, o Sistema registra a reserva e atualiza o calendário e a agenda de aluguéis futuros. <br>
-6. O Sistema exibe uma mensagem de confirmação com os dados da reserva. <br>
-7. O Administrador pode optar por registrar outra reserva ou encerrar o processo. <br>
-
-Fluxo Alternativo (1): Equipamento Indisponível
-
-a) O Sistema identifica que o equipamento já está reservado ou alugado para o período informado. <br>
-b) O Sistema exibe uma mensagem informando a indisponibilidade. <br>
-c) O Administrador pode escolher outro período ou equipamento, ou cancelar o processo. <br>
-
-Pós-condições:
-Uma reserva futura foi registrada com sucesso e o equipamento ficou indisponível para o período correspondente.
-
----
-
-### Gerenciar Manutenção (CSU10)
-
-Sumário: O Administrador realiza o controle de manutenções dos equipamentos, podendo registrar novas manutenções, atualizar status e consultar o histórico de intervenções.
-
-Atores Primários: Administrador.
-
-Atores Secundários: — (não se aplica).
-
-Pré-condições: O Administrador deve estar autenticado no sistema.
-
-Fluxo Principal:
-
-1. O Administrador acessa a funcionalidade de gerenciamento de manutenções. <br>
-2. O Sistema apresenta as opções disponíveis: registrar nova manutenção, atualizar status de manutenção e consultar histórico. <br>
-3. O Administrador seleciona a operação desejada. <br>
-4. O Sistema solicita as informações necessárias para executar a ação (ex.: equipamento, tipo de manutenção, datas, observações). <br>
-5. O Administrador preenche os dados e confirma a operação. <br>
-6. O Sistema valida as informações fornecidas. <br>
-7. Se válidas, o Sistema executa a ação e atualiza o status do equipamento (ex.: Em manutenção, Disponível, etc.). <br>
-8. O Administrador pode optar por realizar outra operação ou encerrar o processo. <br>
-
-Fluxo Alternativo (1): Dados Inválidos
-
-a) O Sistema identifica que dados obrigatórios estão ausentes ou inválidos. <br>
-b) O Sistema informa o erro ao Administrador e solicita a correção. <br>
-c) O Administrador corrige os dados e reenvia a solicitação. <br>
-
-Pós-condições:
-Uma nova manutenção foi registrada, uma manutenção existente foi atualizada ou o histórico foi consultado com sucesso. O status do equipamento foi alterado conforme necessário.
-
----
-
-### Exibir Gráfico de Quantidade de Aluguéis por Dia (CSU11)
+### Exibir Gráfico de Quantidade de Aluguéis por Dia (CSU12)
 
 Sumário: O Administrador visualiza um gráfico com a quantidade de aluguéis realizados por dia, auxiliando na análise de desempenho e no planejamento da operação.
 
@@ -471,7 +528,7 @@ O gráfico foi exibido com sucesso, permitindo ao Administrador analisar o volum
 
 ---
 
-### Filtrar Aluguéis por Status (CSU12)
+### Filtrar Aluguéis por Status (CSU13)
 
 Sumário: O Administrador filtra a lista de aluguéis com base no status atual (ativo, finalizado, reservado, cancelado), facilitando a gestão e análise das locações.
 
@@ -501,7 +558,7 @@ O Administrador obteve uma lista filtrada de aluguéis conforme o status selecio
 
 ---
 
-### Exibir Gráfico de Total de Aluguéis por Equipamentos (CSU13)
+### Exibir Gráfico de Total de Aluguéis por Equipamentos (CSU14)
 
 Sumário: O Administrador visualiza um gráfico com o total de aluguéis realizados por cada equipamento, facilitando a análise de demanda e o controle de uso dos itens.
 
@@ -531,7 +588,7 @@ O gráfico com o total de aluguéis por equipamento foi exibido ao Administrador
 
 ---
 
-### Consultar Histórico de Aluguéis por Cliente (CSU14)
+### Consultar Histórico de Aluguéis por Cliente (CSU15)
 
 Sumário: O Administrador consulta o histórico de aluguéis realizados por um cliente específico, permitindo o acompanhamento do relacionamento e uso dos equipamentos ao longo do tempo.
 
@@ -562,7 +619,7 @@ O histórico de aluguéis do cliente foi exibido ao Administrador com sucesso, o
 
 ---
 
-### Realizar Login (CSU15)
+### Realizar Login (CSU16)
 
 Sumário: O Administrador realiza a autenticação no sistema por meio de login e senha, obtendo acesso às funcionalidades disponíveis conforme seu perfil.
 
@@ -592,7 +649,7 @@ O Administrador foi autenticado com sucesso e teve acesso ao sistema, ou foi inf
 
 ---
 
-### Realizar Logout (CSU16)
+### Realizar Logout (CSU17)
 
 Sumário: O Administrador encerra sua sessão no sistema de forma segura, finalizando o acesso às funcionalidades restritas.
 
@@ -619,66 +676,39 @@ A sessão foi encerrada com sucesso, e o Administrador não possui mais acesso �
 
 ---
 
-### Permitir Consulta de Relatório de Quantidade de Aluguel por Dia (CSU17)
 
-Sumário: O Administrador consulta um relatório que apresenta a quantidade de aluguéis realizados por dia dentro de um determinado período, facilitando a análise operacional.
+### Emitir Relatórios (CSU18)
+Sumário: O Administrador emite relatórios personalizados com dados operacionais do sistema, como aluguéis, manutenções, reservas, disponibilidade de equipamentos e desempenho por período.
 
-Atores Primários: Administrador.
+Ator Primário: Administrador.
 
-Atores Secundários: — (não se aplica).
-
-Pré-condições: O Administrador deve estar autenticado no sistema.
-
-Fluxo Principal:
-
-1. O Administrador acessa a funcionalidade de consulta de relatório de aluguéis por dia. <br>
-2. O Sistema apresenta filtros de data, permitindo a seleção de um intervalo de tempo. <br>
-3. O Administrador informa o período desejado e confirma a consulta. <br>
-4. O Sistema processa os dados de aluguéis realizados no período selecionado. <br>
-5. O Sistema exibe o relatório com a quantidade de aluguéis agrupados por dia. <br>
-6. O Administrador pode optar por exportar o relatório, imprimir, modificar os filtros ou encerrar o processo. <br>
-
-Fluxo Alternativo (1): Período Sem Dados
-
-a) O Sistema identifica que não há aluguéis registrados no período informado. <br>
-b) O Sistema exibe uma mensagem informando a ausência de dados no relatório. <br>
-c) O Administrador pode ajustar o intervalo de datas ou encerrar a consulta. <br>
-
-Pós-condições:
-O relatório com a quantidade de aluguéis por dia foi exibido ao Administrador ou foi informada a ausência de dados para o período solicitado.
-
----
-
-### Permitir Consulta de Relatório de Total de Aluguéis dos Equipamentos (CSU18)
-
-Sumário: O Administrador consulta um relatório que apresenta o total de aluguéis realizados para cada equipamento, permitindo identificar os itens mais utilizados ao longo do tempo.
-
-Atores Primários: Administrador.
-
-Atores Secundários: — (não se aplica).
+Ator Secundário: — (não se aplica neste caso).
 
 Pré-condições: O Administrador deve estar autenticado no sistema.
 
 Fluxo Principal:
+1) O Administrador acessa a funcionalidade de emissão de relatórios. <br>
+2) O Sistema apresenta as categorias disponíveis para emissão: Aluguéis, Manutenções, Reservas, Equipamentos e Clientes. <br>
+3) O Administrador seleciona a categoria desejada. <br>
+4) O Sistema solicita os parâmetros de filtro (ex.: período, status, tipo de equipamento, cliente). <br>
+5) O Administrador preenche os filtros e confirma a geração. <br>
+6) O Sistema processa os dados com base nos filtros informados. <br>
+7) O Sistema exibe o relatório gerado na tela, com opção de exportar em PDF ou Excel. <br>
 
-1. O Administrador acessa a funcionalidade de consulta de relatório de total de aluguéis por equipamento. <br>
-2. O Sistema apresenta filtros como intervalo de datas, categoria de equipamento ou status de aluguel. <br>
-3. O Administrador informa os filtros desejados e confirma a consulta. <br>
-4. O Sistema processa os dados de aluguéis e agrupa os resultados por equipamento. <br>
-5. O Sistema exibe o relatório com o total de aluguéis realizados para cada equipamento no período informado. <br>
-6. O Administrador pode exportar, imprimir, aplicar novos filtros ou encerrar a consulta. <br>
+Fluxo Alternativo (1): Falta de Dados
+a) O Administrador preenche os filtros, mas o sistema não encontra registros para o período ou critérios informados. <br>
+b) O Sistema exibe uma mensagem informando que não há dados para gerar o relatório. <br>
+c) O Administrador pode ajustar os filtros e tentar novamente. <br>
 
-Fluxo Alternativo (1): Sem Registros Encontrados
+Fluxo Alternativo (2): Exportação
+a) Após visualizar o relatório, o Administrador opta por exportar os dados. <br>
+b) O Sistema apresenta as opções de formato (PDF ou Excel). <br>
+c) O Administrador escolhe o formato desejado. <br>
+d) O Sistema gera o arquivo e disponibiliza para download. <br>
 
-a) O Sistema identifica que nenhum aluguel foi realizado com os critérios informados. <br>
-b) O Sistema exibe uma mensagem informando que não há dados disponíveis para gerar o relatório. <br>
-c) O Administrador pode ajustar os filtros ou encerrar a consulta. <br>
-
-Pós-condições:
-O relatório com o total de aluguéis por equipamento foi exibido com sucesso ou foi informada a ausência de dados para os critérios aplicados.
+Pós-condições: Um relatório foi gerado com base nos filtros informados e, se necessário, exportado para visualização ou análise externa.
 
 ---
-
 
 ### 3.4.3 Diagrama de Classes
 
