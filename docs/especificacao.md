@@ -722,10 +722,10 @@ A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a i
 ### 3.4.4 Descrições das Classes
 
 | #   | Nome      | Descrição                                                   |
-| --- | --------- | ----------------------------------------------------------- |
-| 1   | Aluno     | Cadastro de informações relativas aos alunos.               |
-| 2   | Curso     | Cadastro geral de cursos de aperfeiçoamento.                |
-| 3   | Matrícula | Cadastro de Matrículas de alunos nos cursos.                |
-| 4   | Turma     | Cadastro de turmas.                                         |
-| 5   | Professor | Cadastro geral de professores que ministram as disciplinas. |
-| ... | ...       | ...                                                         |
+| --- | ----------------- | ----------------------------------------------------------- |
+| 1   | Usuário           | Classe genérica para representar os usuários do sistema. Serve como superclasse para Administrador e Cliente.               |
+| 2   | Administrador     | Classe que herda características de Usuário. Ser responsável por gerar relatórios no sistema.                               |
+| 3   | Cliente           | Classe que herda características de Usuário. Poder alugar e reservar equipamentos                                           |
+| 4   | Relatório         | Documento a ser gerado por um administrador com informações do sistema.                                                     |
+| 5   | Equipamento       | Representar os equipamentos disponíveis para aluguel e reserva. Poder passar por manutenções.                               |
+| 6   | Manutenção        | Registrar manutenções realizadas em um equipamento.                                                                         |
