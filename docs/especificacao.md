@@ -1,6 +1,6 @@
 # 3. DOCUMENTO DE ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE
 
-Nesta parte do trabalho você deve detalhar a documentação dos requisitos do sistema proposto de acordo com as seções a seguir. Ressalta-se que aqui é utilizado como exemplo um sistema de gestão de cursos de aperfeiçoamento.
+Constarão a seguir os detalhamentos dos requisitos do sistema:
 
 ## 3.1 Objetivos deste documento
 Este documento tem como objetivo descrever e especificar os requisitos funcionais e não funcionais do sistema Obra Certa, atendendo às necessidades da empresa de aluguel de equipamentos e máquinas, bem como de seus clientes. Ele servirá como base para o desenvolvimento e validação do sistema, garantindo que as funcionalidades essenciais para a operação sejam contempladas.
