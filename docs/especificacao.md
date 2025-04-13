@@ -49,7 +49,7 @@ O sistema Obra Certa é voltado exclusivamente para a gestão de aluguéis de eq
 | RF2    | Gerenciar Equipamentos                               | Processamento de Inclusão, Alteração, Exclusão de equipamentos                                                           |
 | RF3    | Consultar Equipamentos                               | Processamento de Consulta de equipamentos                                                                                |
 | RF4    | Gerenciar Aluguel                                    | Processamento de Inclusão, Alteração, Exclusão e Consulta de aluguéis                                                    |
-| RF5    | Gerenciar Manutenções                                | Processamento de Inclusão, Alteração, Exclusão e Consulta de manutenções dos equipamentos                                |
+| RF5    | Gerenciar Manutenção                                | Processamento de Inclusão, Alteração, Exclusão e Consulta de manutenções dos equipamentos                                |
 | RF6    | Filtrar equipamentos                                 | Implementar filtros de equipamentos por tipo/categoria                                                                   |
 | RF7    | Visualizar status de disponibilidade                 | Mostrar o status de disponibilidade dos equipamentos                                                                     |
 | RF8    | Visualizar calendário                                | Exibir calendário com datas disponíveis para cada equipamento                                                            |
