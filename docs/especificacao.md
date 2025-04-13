@@ -721,11 +721,15 @@ A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a i
 
 ### 3.4.4 Descrições das Classes
 
-| #   | Nome      | Descrição                                                   |
-| --- | ----------------- | ----------------------------------------------------------- |
-| 1   | Usuário           | Classe genérica para representar os usuários do sistema. Serve como superclasse para Administrador e Cliente.               |
-| 2   | Administrador     | Classe que herda características de Usuário. Ser responsável por gerar relatórios no sistema.                               |
-| 3   | Cliente           | Classe que herda características de Usuário. Poder alugar e reservar equipamentos                                           |
-| 4   | Relatório         | Documento a ser gerado por um administrador com informações do sistema.                                                     |
-| 5   | Equipamento       | Representar os equipamentos disponíveis para aluguel e reserva. Poder passar por manutenções.                               |
-| 6   | Manutenção        | Registrar manutenções realizadas em um equipamento.                                                                         |
+| #   | Nome                      | Descrição                                                   |
+| --- | -----------------         | ----------------------------------------------------------- |
+| 1   | Usuário                   | Classe genérica para representar os usuários do sistema. Serve como superclasse para Administrador e Cliente.               |
+| 2   | Administrador             | Classe que herda características de Usuário. Ser responsável por gerar relatórios no sistema.                               |
+| 3   | Cliente                   | Classe que herda características de Usuário. Poder alugar e reservar equipamentos                                           |
+| 4   | Reserva                   |	Representar uma solicitação de reserva feita por um Cliente. Pode conter diversos itens de reserva.                         |
+| 5   | ItemReserva               | Representar um equipamento específico incluído em uma Reserva.                                                              |
+| 6   | Locação                   | Representar uma locação confirmada de equipamentos feita por um Cliente. Pode conter diversos itens de locação.             |
+| 7   | ItemLocacao               | Representar um equipamento específico incluído em uma Locação                                                               |
+| 8   | Equipamento               | Representar os equipamentos disponíveis para aluguel e reserva. Poder passar por manutenções.                               |
+| 9   | AgendaDisponibilidade     | Controlar a disponibilidade dos equipamentos para reserva ou locação.                                                       |
+| 10  | Manutenção                | Registrar manutenções realizadas em um equipamento.                                                                         |
