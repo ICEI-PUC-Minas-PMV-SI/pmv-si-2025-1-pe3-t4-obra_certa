@@ -712,7 +712,7 @@ Pós-condições: Um relatório foi gerado com base nos filtros informados e, se
 
 ### 3.4.3 Diagrama de Classes
 
-A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a identificação do funcionário responsável pelo registro, bem com os dados do aluno e turmas. Para uma disciplina podemos ter diversas turmas, mas apenas um professor responsável por ela.
+O diagrama de classes a seguir apresenta a estrutura fundamental do sistema de gerenciamento de reservas e locações de equipamentos. Ele descreve os principais elementos envolvidos, como usuários, clientes, equipamentos, reservas, locações e suas respectivas relações.
 
 #### Figura 2: Diagrama de Classes do Sistema.
 
