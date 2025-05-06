@@ -11,7 +11,7 @@ html {
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
 
-    --background: 0 0% 100%;
+    --background: 0 0% 99.2%;
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;
     --card-foreground: 20 14.3% 4.1%;
@@ -71,7 +71,7 @@ html {
     @apply border-border;
   }
   body {
-    @apply bg-background font-sans text-foreground;
+    @apply bg-[#F8F8F8] font-sans text-foreground;
   }
 }
 

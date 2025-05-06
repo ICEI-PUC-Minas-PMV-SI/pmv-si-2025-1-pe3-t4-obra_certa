@@ -6,9 +6,9 @@ export default function SignIn() {
       Tela de Login
       <Button
         variant="default"
-        className="bg-red-500 text-white hover:bg-red-600"
+        className="bg-primary text-white hover:bg-red-600"
       >
-        Entrar Teste
+        Teste
       </Button>
     </div>
   )
