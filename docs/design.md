@@ -27,7 +27,7 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 ### Mapa de Empatia 3: Marcela Abreu
 ![Mapa de Empatia 3](img/mapa-empatia/mapa-de-empatia-marcela-abreu.png)
 
-### Mapa de Empatia 3: Patricia Menezes
+### Mapa de Empatia 4: Patricia Menezes
 ![Mapa de Empatia 4](img/mapa-empatia/mapa-empatia-patricia-menezes.png)
 
 ## 4.3 Protótipos das Interfaces
