@@ -8,7 +8,7 @@ export default function SignIn() {
         variant="default"
         className="bg-primary text-white hover:bg-red-600"
       >
-        Teste
+        Teste teste
       </Button>
     </div>
   )
