@@ -1,17 +1,13 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
+import { Kanit } from 'next/font/google'
 import './globals.css'
 import { RootProviders } from '@/components/providers/RootProviders'
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-})
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+const kanit = Kanit({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-kanit',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -32,9 +28,7 @@ export default function RootLayout({
         colorScheme: 'light',
       }}
     >
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${kanit.variable}  antialiased`}>
         <RootProviders>{children}</RootProviders>
       </body>
     </html>
