@@ -3,6 +3,7 @@ import { FileInput } from 'lucide-react'
 import { Button } from '../ui/button'
 import { OverviewCard, OverviewCardData } from '../overview_card'
 import { OverviewGraph } from '../overview_graph'
+import { DateRangePicker } from '../ui/date-range-picker'
 
 const cardsContent: OverviewCardData[] = [
   {
@@ -58,12 +59,11 @@ const rentalsPerDayData = [
 export const Overview = () => {
   return (
     <section className="flex flex-col mt-12 gap-4">
-      {/* Header */}
       <div className="flex items-center justify-between">
         <h3 className="text-3xl font-normal">Visão Geral</h3>
 
         <div className="flex gap-6">
-          {/* TODO: date picker */}
+          <DateRangePicker showCompare={false} />
 
           <Button>
             Gerar Relatório <FileInput />
@@ -71,8 +71,7 @@ export const Overview = () => {
         </div>
       </div>
 
-      {/* Cards */}
-      <div className="flex py-16 gap-6 md:gap-10 w-full overflow-x-auto no-scrollbar pr-4 md:pr-0">
+      <div className="flex py-16 gap-6 md:flex-wrap md:gap-10 w-full overflow-x-auto no-scrollbar pr-4 md:pr-0">
         {Array.isArray(cardsContent) &&
           cardsContent.length > 0 &&
           cardsContent.map((cardData) => (
@@ -80,7 +79,6 @@ export const Overview = () => {
           ))}
       </div>
 
-      {/* Gráficos */}
       <div className="flex flex-col md:flex-row gap-6 md:gap-10 w-full">
         <OverviewGraph
           data={totalRentalsData}
