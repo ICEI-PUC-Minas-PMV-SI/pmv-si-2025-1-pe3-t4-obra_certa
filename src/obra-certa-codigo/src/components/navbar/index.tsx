@@ -10,7 +10,6 @@ import { cn } from '@/lib/utils'
 import { Button, buttonVariants } from '../ui/button'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '../ui/sheet'
 import { Logo } from '../logo'
-import { ThemeSwitch } from '../theme_switch'
 import { ProfileButton } from '../profile_button'
 
 const items = [
@@ -86,7 +85,7 @@ export const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <ThemeSwitch />
+            {/* <ThemeSwitch /> */}
             <ProfileButton />
           </div>
         </nav>
@@ -128,7 +127,7 @@ export const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <ThemeSwitch />
+            {/* <ThemeSwitch /> */}
             <ProfileButton />
           </div>
         </nav>
