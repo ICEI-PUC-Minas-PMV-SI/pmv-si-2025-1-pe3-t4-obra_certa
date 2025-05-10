@@ -14,6 +14,7 @@ import {
 } from 'recharts'
 import { useState, useEffect } from 'react'
 import { Card } from '../ui/card'
+import { useIsMobile } from '@/hooks/use-mobile'
 
 interface Props {
   data: {
@@ -43,9 +44,8 @@ export const OverviewGraph = ({
   type = 'bar',
 }: Props) => {
   const [clickedPayload, setClickedPayload] = useState<any>(null)
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  const isMobile = useIsMobile()
 
-  // Fecha tooltip ao redimensionar
   useEffect(() => {
     const handleResize = () => {
       setClickedPayload(null)
@@ -58,7 +58,6 @@ export const OverviewGraph = ({
     <Card className="bg-white rounded-xl flex flex-col shadow-xl p-4 w-full md:w-[648px] h-[362px] hover:shadow-2xl transition-all duration-300 ease-in-out">
       <h4 className="text-base font-medium mb-2">{title}</h4>
       <div className="w-full h-full relative">
-        {/* Tooltip custom manual (mobile click) */}
         {isMobile && clickedPayload && (
           <div className="absolute top-2 left-2 bg-white border border-gray-200 rounded-lg px-3 py-2 shadow-md text-sm z-10">
             <p className="font-semibold">{clickedPayload.label}</p>
