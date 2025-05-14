@@ -12,7 +12,7 @@ html {
     --font-mono: var(--font-geist-mono);
 
     --background: 0 0% 99.2%;
-    --foreground: 20 14.3% 4.1%;
+    --foreground: 0 0% 19%;
     --card: 0 0% 100%;
     --card-foreground: 20 14.3% 4.1%;
     --popover: 0 0% 100%;
@@ -79,6 +79,28 @@ html {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 4px;
+
+  @screen md {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@layer base {
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
