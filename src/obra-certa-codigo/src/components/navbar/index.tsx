@@ -75,7 +75,7 @@ export const Navbar = () => {
   const DesktopNavbar = () => {
     return (
       <div className="hidden py-4 md:block">
-        <nav className="container bg-background flex items-center justify-between px-8 rounded-sm">
+        <nav className="container bg-background flex items-center justify-between !px-12 rounded-sm">
           <div className="flex h-[62px] min-h-[62px] items-center gap-x-4">
             <Logo />
             <div className="flex h-full">

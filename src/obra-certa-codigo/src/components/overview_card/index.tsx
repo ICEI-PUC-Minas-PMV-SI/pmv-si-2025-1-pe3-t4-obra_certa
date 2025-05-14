@@ -29,13 +29,13 @@ export const OverviewCard = ({ data }: Props) => {
     )
 
   return (
-    <Card className="bg-white rounded-xl justify-between flex flex-col shadow-xl p-6 max-w-[312px] min-w-[312px] min-h-[200px] max-h-[200px] hover:shadow-2xl transition-all duration-300 ease-in-out">
+    <Card className="bg-white rounded-xl w-full min-w-0 flex-1 p-6 gap-12 hover:shadow-2xl transition-all duration-300 ease-in-out">
       <div className="">
         <div className="flex items-center justify-between">
           <p className="text-neutral-500">{data.title}</p>
 
           <Badge
-            className={`bg-white shadow-md min-w-[84px] items-center justify-center gap-2 ${
+            className={`bg-white shadow-md min-w-[84px] items-center justify-center gap-2 transition-all ${
               data.type === 'trending-up'
                 ? 'hover:bg-emerald-500/80'
                 : 'hover:bg-red-500/80'
@@ -52,7 +52,7 @@ export const OverviewCard = ({ data }: Props) => {
         <h3 className="text-3xl text-neutral-800 font-normal mt-2">134</h3>
       </div>
 
-      <div className="">
+      <div className="flex mt-12">
         <p className="text-sm text-neutral-800 flex items-center gap-2">
           {subtitle}
           {trendingIcon}
