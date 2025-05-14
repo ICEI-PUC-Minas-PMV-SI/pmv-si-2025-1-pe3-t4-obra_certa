@@ -55,9 +55,9 @@ export const OverviewGraph = ({
   }, [])
 
   return (
-    <Card className="bg-white rounded-xl flex flex-col shadow-xl p-4 w-full md:w-[648px] h-[362px] hover:shadow-2xl transition-all duration-300 ease-in-out">
+    <Card className="bg-white rounded-xl flex flex-col shadow-xl p-4 w-full min-h-[320px] md:min-h-[380px] hover:shadow-2xl transition-all duration-300 ease-in-out">
       <h4 className="text-base font-medium mb-2">{title}</h4>
-      <div className="w-full h-full relative">
+      <div className="w-full h-full flex-1 relative">
         {isMobile && clickedPayload && (
           <div className="absolute top-2 left-2 bg-white border border-gray-200 rounded-lg px-3 py-2 shadow-md text-sm z-10">
             <p className="font-semibold">{clickedPayload.label}</p>

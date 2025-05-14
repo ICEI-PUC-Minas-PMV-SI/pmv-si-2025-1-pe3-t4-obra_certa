@@ -1,3 +1,5 @@
+'use client'
+import { jsPDF } from 'jspdf'
 import { FileInput } from 'lucide-react'
 
 import { Button } from '../ui/button'
@@ -57,21 +59,37 @@ const rentalsPerDayData = [
 ]
 
 export const Overview = () => {
-  return (
-    <section className="flex flex-col mt-12 gap-4">
-      <div className="flex items-center justify-between">
-        <h3 className="text-3xl font-normal">Visão Geral</h3>
+  const handleDownloadReport = () => {
+    const doc = new jsPDF()
+    doc.text('Obra Certa PDF - Relatório Dashboard', 20, 30)
 
-        <div className="flex gap-6">
+    const pdfBlob = doc.output('blob')
+    const url = URL.createObjectURL(pdfBlob)
+
+    const link = document.createElement('a')
+    link.href = url
+    link.download = 'relatorio-obra-certa.pdf'
+    link.target = '_blank'
+    link.click()
+
+    URL.revokeObjectURL(url)
+  }
+
+  return (
+    <section className="flex flex-col mt-8 gap-3">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <h3 className="text-2xl font-normal">Visão Geral</h3>
+
+        <div className="flex gap-6 md:flex-row flex-col">
           <DateRangePicker showCompare={false} />
 
-          <Button>
+          <Button className="min-h-[40px]" onClick={handleDownloadReport}>
             Gerar Relatório <FileInput />
           </Button>
         </div>
       </div>
 
-      <div className="flex py-16 gap-6 md:flex-wrap md:gap-10 w-full overflow-x-auto no-scrollbar pr-4 md:pr-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-8 w-full">
         {Array.isArray(cardsContent) &&
           cardsContent.length > 0 &&
           cardsContent.map((cardData) => (
@@ -79,7 +97,7 @@ export const Overview = () => {
           ))}
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6 md:gap-10 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
         <OverviewGraph
           data={totalRentalsData}
           title="Total de Aluguéis por Equipamento"
