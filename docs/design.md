@@ -52,13 +52,13 @@ Nesta interface do dashboard do sistema Obra Certa foram aplicados os princípio
 
 ### Aplicação dos Princípios Gestálticos:
 
-• Proximidade: Os cards informativos (Novos Clientes, Aluguéis Ativos, etc.) estão dispostos próximos uns dos outros, sendo percebidos como um grupo coeso de métricas relacionadas.
-• Boa continuidade (alinhamento): Elementos são organizados em linhas e colunas com alinhamento consistente, o que facilita a leitura sequencial e a navegação visual.
-• Simetria: A disposição dos elementos (cards e gráficos) é equilibrada e simétrica, promovendo uma sensação de estabilidade e organização.
-• Similaridade: Os cards compartilham o mesmo estilo (cor de fundo, borda, tipografia), o que permite ao usuário identificar rapidamente que são componentes com a mesma função.
-• Fecho: O uso de contêineres com bordas suaves e sombras ajuda o usuário a perceber áreas completas, mesmo que algumas bordas estejam mais sutis.
-• Região comum: Os cards e os gráficos estão dispostos dentro de áreas bem delimitadas, reforçando o agrupamento de informações.
-• Conectividade: Embora não existam linhas de conexão explícitas, a repetição de estilo e alinhamento visual criam uma percepção de conexão entre os elementos relacionados.
+- Proximidade: Os cards informativos (Novos Clientes, Aluguéis Ativos, etc.) estão dispostos próximos uns dos outros, sendo percebidos como um grupo coeso de métricas relacionadas.
+- Boa continuidade (alinhamento): Elementos são organizados em linhas e colunas com alinhamento consistente, o que facilita a leitura sequencial e a navegação visual.
+- Simetria: A disposição dos elementos (cards e gráficos) é equilibrada e simétrica, promovendo uma sensação de estabilidade e organização.
+- Similaridade: Os cards compartilham o mesmo estilo (cor de fundo, borda, tipografia), o que permite ao usuário identificar rapidamente que são componentes com a mesma função.
+- Fecho: O uso de contêineres com bordas suaves e sombras ajuda o usuário a perceber áreas completas, mesmo que algumas bordas estejam mais sutis.
+- Região comum: Os cards e os gráficos estão dispostos dentro de áreas bem delimitadas, reforçando o agrupamento de informações.
+- Conectividade: Embora não existam linhas de conexão explícitas, a repetição de estilo e alinhamento visual criam uma percepção de conexão entre os elementos relacionados.
 
 ### Aplicação das Oito Regras de Ouro:
 
