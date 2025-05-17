@@ -99,6 +99,9 @@ export default function Equipamentos() {
 
   return (
     <div className="h-full container bg-background">
+      <div className="text-3xl font-normal pt-12 pl-12 pr-12">
+        <h1>Equipamentos</h1>
+      </div>
       <div className="pt-12 px-12 pb-6">
         <div className="flex items-center gap-4">
           <div className="relative flex-1 pr-96">
@@ -119,7 +122,7 @@ export default function Equipamentos() {
 
           <Button
             variant="outline"
-            className="flex items-center gap-2 whitespace-nowrap"
+            className="flex items-center gap-2 whitespace-nowrap bg-primary text-white border border-primary"
             onClick={handleOpenModal}
           >
             <Plus className="h-4 w-4" />
