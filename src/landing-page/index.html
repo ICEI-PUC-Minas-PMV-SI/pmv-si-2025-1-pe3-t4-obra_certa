@@ -7,8 +7,10 @@
   <title>Obra Certa - Aluguel de Máquinas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Kanit', sans-serif;
     }
 
     .bg-orange {
@@ -71,13 +73,56 @@
       color: white;
       border-color: #ff6c00;
     }
+
+    .card-equipamento {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .carousel-item .row>div {
+      display: flex;
+    }
+
+    .card-equipamento {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .card-equipamento .card-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-equipamento h5 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .card-equipamento .btn {
+      width: 100%;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 
 <body>
   <header class="bg-light shadow-sm py-3">
     <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="h4 text-orange m-0">Obra Certa</h1>
+      <div class="d-flex align-items-center gap-2">
+        <img src="img/obracerta_v3_1.svg" alt="Logo Obra Certa" height="32">
+        <h1 class="h4 text-orange m-0">Obra Certa</h1>
+      </div>
+
+
       <nav>
         <a href="#equipamentos" class="text-decoration-none me-3 fw-semibold text-dark">Equipamentos</a>
         <a href="#beneficios" class="text-decoration-none me-3 fw-semibold text-dark">Benefícios</a>
@@ -103,7 +148,7 @@
           <div class="carousel-item active">
             <div class="row text-center justify-content-center">
               <div class="col-md-3">
-                <div class="card shadow-sm p-3 border rounded-4">
+                <div class="card shadow-sm p-3 border rounded-4 card-equipamento">
                   <img src="img/betoneira.png" class="card-img-top" alt="Betoneira">
                   <div class="card-body">
                     <p class="mb-1 text-muted">Aluguel de</p>
@@ -113,7 +158,7 @@
                 </div>
               </div>
               <div class="col-md-3">
-                <div class="card shadow-sm p-3 border rounded-4">
+                <div class="card shadow-sm p-3 border rounded-4 card-equipamento">
                   <img src="img/compactador.png" class="card-img-top" alt="Martelete 2kg">
                   <div class="card-body">
                     <p class="mb-1 text-muted">Aluguel de</p>
@@ -123,9 +168,8 @@
                 </div>
               </div>
               <div class="col-md-3">
-                <div class="card shadow-sm p-3 border rounded-4">
-                  <img src="img/martelo-demolidor.webp" class="card-img-top"
-                    alt="Painel Metálico">
+                <div class="card shadow-sm p-3 border rounded-4 card-equipamento">
+                  <img src="img/martelo-demolidor.webp" class="card-img-top" alt="Painel Metálico">
                   <div class="card-body">
                     <p class="mb-1 text-muted">Aluguel de</p>
                     <h5 class="fw-bold">Martelo demolidor 1.750 watts encaixe sextavado de 28 mm</h5>
@@ -138,7 +182,7 @@
           <div class="carousel-item">
             <div class="row text-center justify-content-center">
               <div class="col-md-3">
-                <div class="card shadow-sm p-3 border rounded-4">
+                <div class="card shadow-sm p-3 border rounded-4 card-equipamento">
                   <img src="img/motoserra.jpg" class="card-img-top" alt="Martelete Rompedor">
                   <div class="card-body">
                     <p class="mb-1 text-muted">Aluguel de</p>
@@ -148,7 +192,7 @@
                 </div>
               </div>
               <div class="col-md-3">
-                <div class="card shadow-sm p-3 border rounded-4">
+                <div class="card shadow-sm p-3 border rounded-4 card-equipamento">
                   <img src="img/maquina-solda.JPG" class="card-img-top" alt="Andaime">
                   <div class="card-body">
                     <p class="mb-1 text-muted">Aluguel de</p>
@@ -158,9 +202,8 @@
                 </div>
               </div>
               <div class="col-md-3">
-                <div class="card shadow-sm p-3 border rounded-4">
-                  <img src="img/serra-policorte.JPG" class="card-img-top"
-                    alt="Compactador de Solo">
+                <div class="card shadow-sm p-3 border rounded-4 card-equipamento">
+                  <img src="img/serra-policorte.JPG" class="card-img-top" alt="Compactador de Solo">
                   <div class="card-body">
                     <p class="mb-1 text-muted">Aluguel de</p>
                     <h5 class="fw-bold">Serra Policorte GCO 230 1/4 Pol. 2300W 220V BOSCH</h5>
