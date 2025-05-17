@@ -50,7 +50,8 @@ Apresente nesta seção os protótipos de alta fidelidade do sistema proposto. A
 
 Nesta interface do dashboard do sistema Obra Certa foram aplicados os princípios gestálticos e as regras de ouro da usabilidade para garantir clareza visual, organização e eficiência na interação do usuário.
 
-Aplicação dos Princípios Gestálticos
+### Aplicação dos Princípios Gestálticos:
+
 • Proximidade: Os cards informativos (Novos Clientes, Aluguéis Ativos, etc.) estão dispostos próximos uns dos outros, sendo percebidos como um grupo coeso de métricas relacionadas.
 • Boa continuidade (alinhamento): Elementos são organizados em linhas e colunas com alinhamento consistente, o que facilita a leitura sequencial e a navegação visual.
 • Simetria: A disposição dos elementos (cards e gráficos) é equilibrada e simétrica, promovendo uma sensação de estabilidade e organização.
@@ -59,7 +60,7 @@ Aplicação dos Princípios Gestálticos
 • Região comum: Os cards e os gráficos estão dispostos dentro de áreas bem delimitadas, reforçando o agrupamento de informações.
 • Conectividade: Embora não existam linhas de conexão explícitas, a repetição de estilo e alinhamento visual criam uma percepção de conexão entre os elementos relacionados.
 
-Aplicação das Oito Regras de Ouro
+### Aplicação das Oito Regras de Ouro:
 
 1. Perseguir a Consistência: Toda a interface segue uma padronização visual e comportamental, com tipografias, cores e espaçamentos consistentes.
 2. Fornecer Atalhos: O items do menu de navegação facilitam o acesso rápido a páginas de acesso recorrente.
