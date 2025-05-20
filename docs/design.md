@@ -44,7 +44,32 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 
 Apresente nesta seção os protótipos de alta fidelidade do sistema proposto. A fidelidade do protótipo refere-se ao nível de detalhes e funcionalidades incorporadas a ele. Assim, um protótipo de alta fidelidade é uma representação interativa do produto, baseada no computador ou em dispositivos móveis. Esse protótipo já apresenta maior semelhança com o design final em termos de detalhes e funcionalidades. No desenvolvimento dos protótipos, devem ser considerados os princípios gestálticos, as recomendações ergonômicas e as regras de design (como as 8 regras de ouro). É importante descrever no texto do relatório como os princípios gestálticos e as regras de ouro foram seguidas no projeto das interfaces. Nesta etapa deve-se dar uma ênfase na implementação do software de modo que possam ser realizados os testes com usuários na etapa seguinte.
 
-### Tela 1 - Dashboard
+### Tela 1 - Landing Page
+
+![Tela Landing Page](img/telas/landing-page.png)
+
+Nesta interface da landing page do sistema Obra Certa foram aplicados os princípios gestálticos e as 8 regras de ouro da usabilidade para promover uma navegação fluida, reforçar a hierarquia visual e facilitar a compreensão dos conteúdos. A organização dos elementos, o uso de cores contrastantes e a consistência no layout contribuem para uma experiência clara, intuitiva e eficiente para o usuário.
+
+### Aplicação dos Princípios Gestálticos:
+
+- Proximidade: Agrupamento de elementos relacionados, como campos do formulário e produtos em destaque.
+- Similaridade: Uso consistente de estilo visual (botões, cartões, títulos) reforça a identidade visual e facilita a navegação.
+- Figura e fundo: Destaque dos elementos principais com bom contraste (ex: botão laranja sobre fundo escuro).
+- Continuidade: Leitura fluida da página em rolagem vertical, com alinhamento consistente dos elementos.
+- Unidade: A paleta de cores, a tipografia e o espaçamento mantêm a harmonia visual em todas as seções.
+
+### Aplicação das 8 Regras de Ouro:
+
+1. Manter a consistência: Tipografia, botões e espaçamentos seguem padrões claros e replicáveis.
+2. Oferecer atalhos: Menus diretos no topo da página agilizam o acesso às principais seções.
+3. Oferecer feedback informativo: Botões como “Solicitar Orçamento” dão respostas visuais ao clique.
+4. Projetar diálogos para encerramento: A seção de formulário permite conclusão clara com um botão "Enviar".
+5. Evitar erros: Campos de formulário identificam claramente o que precisa ser preenchido.
+6. Permitir desfazer ações: Ainda que não explicitado no protótipo visual, o formulário pode ser resetado (ex: tecla Delete).
+7. Dar suporte a controle do usuário: Navegação livre e não linear pela página, com foco em CTAs claros.
+8. Reduzir a carga de memória do usuário: A página é autossuficiente em informações e instruções, com linguagem clara e direta.
+
+### Tela 2 - Dashboard
 
 ![Tela Dashboard](img/telas/dashboard-page.png)
 
