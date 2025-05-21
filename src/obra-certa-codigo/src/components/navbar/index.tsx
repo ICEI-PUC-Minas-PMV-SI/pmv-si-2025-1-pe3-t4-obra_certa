@@ -30,6 +30,11 @@ const items = [
   },
   {
     id: '4',
+    label: 'Aluguéis',
+    link: '/alugueis',
+  },
+  {
+    id: '5',
     label: 'Reservas',
     link: '/reservas',
   },
