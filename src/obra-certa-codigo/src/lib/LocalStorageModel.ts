@@ -190,11 +190,13 @@ export class LocalStorageModel {
 
   private static validate<T>(entity: keyof DataModel, record: Partial<T>): void {
     const requiredFields = Object.keys(initialData[entity][0]);
+
     for (const field of requiredFields) {
-      if (!(field in record)) {
-        throw new Error(`Campo obrigatório ausente: ${field}`);
+      if (field in record && record[field as keyof T] == null) {
+        throw new Error(`Campo ${field} está vazio ou nulo`);
       }
     }
+
   }
 
   private static generateId(entity: keyof DataModel): number {
@@ -202,26 +204,40 @@ export class LocalStorageModel {
     return items.length ? Math.max(...items.map((item: any) => item.id)) + 1 : 1;
   }
 
-  static create<T>(entity: keyof DataModel, record: Partial<T>): T {
-    this.validate<T>(entity, record);
+  static create<K extends keyof DataModel>(entity: keyof DataModel, record: Partial<K>, uniqueField?: keyof K): K {
+    this.validate<K>(entity, record);
+
+    if (uniqueField && this.exists<K>(entity, uniqueField, record[uniqueField])) {
+      return record as K;
+    }
+
     const data = this.getData();
-    const newRecord = { ...record, id: this.generateId(entity) } as T;
-    (data[entity] as T[]).push(newRecord);
+    const newRecord = { ...record, id: this.generateId(entity) } as K;
+    (data[entity] as K[]).push(newRecord);
     this.saveData(data);
     return newRecord;
   }
 
-  static readAll<T>(entity: keyof DataModel): T[] {
-    return this.getData()[entity] as T[];
+  private static exists<T>(
+    entity: keyof DataModel,
+    field: keyof T,
+    value: any
+  ): boolean {
+    const data = this.getData()[entity] as T[];
+    return data.some((item) => item[field] === value);
+  }
+
+  static readAll<K extends keyof DataModel>(entity: K): DataModel[K] {
+    return this.getData()[entity];
   }
 
   static readById<T>(entity: keyof DataModel, id: number): T | undefined {
     return (this.getData()[entity] as T[]).find((item) => item.id === id);
   }
 
-  static update<T>(entity: keyof DataModel, id: number, updates: Partial<T>): void {
+  static update<K extends keyof DataModel>(entity: K, id: number, updates: Partial<K>): void {
     const data = this.getData();
-    const list = data[entity] as T[];
+    const list = data[entity] as K[];
     const index = list.findIndex((item: any) => item.id === id);
     if (index === -1) {
       throw new Error(`Registro com id=${id} não encontrado.`);
