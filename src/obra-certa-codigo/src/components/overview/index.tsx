@@ -1,4 +1,5 @@
 'use client'
+import React, { use, useEffect } from 'react';
 import { jsPDF } from 'jspdf'
 import { FileInput } from 'lucide-react'
 
@@ -6,6 +7,9 @@ import { Button } from '../ui/button'
 import { OverviewCard, OverviewCardData } from '../overview_card'
 import { OverviewGraph } from '../overview_graph'
 import { DateRangePicker } from '../ui/date-range-picker'
+
+import { LocalStorageModel } from '@/lib/LocalStorageModel'
+import type { Cliente } from '@/lib/LocalStorageModel'
 
 const cardsContent: OverviewCardData[] = [
   {
@@ -74,6 +78,27 @@ export const Overview = () => {
 
     URL.revokeObjectURL(url)
   }
+
+  useEffect(() => {
+    const novoCliente: Partial<Cliente> = {
+      nome: 'João Teste',
+      cpf: '999.999.999-99',
+      email: 'joao@email.com',
+      telefone: '11999999999',
+      endereco: 'Rua Teste, 123'
+    }
+
+    try {
+      const cliente = LocalStorageModel.create('clientes', novoCliente, 'cpf')
+      console.log('Criado:', cliente)
+      const clientes = LocalStorageModel.readAll('clientes');
+      console.log('Clientes:', clientes)
+      const clientId = LocalStorageModel.readById('clientes', 101);
+      console.log('Cliente ID 1:', clientId)
+    } catch (err) {
+      console.error(err)
+    }
+  })
 
   return (
     <section className="flex flex-col mt-8 gap-3">
