@@ -49,9 +49,10 @@ export default function Alugueis() {
     handleModalClose()
   }
 
-  const filteredAlugueis = aluguéis.filter((a) =>
-    a.status.toLowerCase().includes(searchTerm.toLowerCase())
-  )
+  const filteredAlugueis = aluguéis.filter((a) => {
+    const cliente = clientes.find((c) => c.id === a.cliente_id)
+    return cliente?.nome.toLowerCase().includes(searchTerm.toLowerCase())
+  })
 
   useEffect(() => {
     setAlugueis(LocalStorageModel.readAll<Aluguel>('alugueis'))
@@ -70,7 +71,7 @@ export default function Alugueis() {
           <div className="relative flex-1 pr-96">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Buscar por status..."
+              placeholder="Buscar por cliente..."
               className="pl-10 bg-white text-black"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
