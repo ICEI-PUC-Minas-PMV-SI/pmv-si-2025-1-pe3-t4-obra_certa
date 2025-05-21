@@ -1,64 +1,177 @@
 'use client'
-import React, { useState } from 'react'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
+import React, { useEffect, useState } from 'react'
 import { X } from 'lucide-react'
 
-export interface RentalFormData {
-  client_id: number
-  equipamentos: number[]
-  start_date: Date
-  end_date: Date
-  valor_total: number
-  status: string
+import {
+  LocalStorageModel,
+  Cliente,
+  Equipamento,
+} from '@/lib/LocalStorageModel'
+
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+
+function MultiSelectEquipamento({
+  options,
+  value,
+  onChange,
+}: {
+  options: Equipamento[]
+  value: number[]
+  onChange: (v: number[]) => void
+}) {
+  const [open, setOpen] = useState(false)
+  const handleToggle = (id: number) => {
+    onChange(
+      value.includes(id) ? value.filter((i) => i !== id) : [...value, id]
+    )
+  }
+  return (
+    <div className="relative">
+      <Button
+        type="button"
+        variant="outline"
+        className="w-full justify-between"
+        onClick={() => setOpen((v) => !v)}
+      >
+        {value.length > 0
+          ? options
+              .filter((o) => value.includes(o.id))
+              .map((o) => o.nome)
+              .join(', ')
+          : 'Selecione os equipamentos'}
+        <span className="ml-2">▼</span>
+      </Button>
+      {open && (
+        <div className="absolute z-10 w-full mt-1 bg-white border rounded shadow p-2 max-h-48 overflow-auto">
+          {options.map((opt) => (
+            <label
+              key={opt.id}
+              className="flex items-center gap-2 cursor-pointer"
+            >
+              <input
+                type="checkbox"
+                checked={value.includes(opt.id)}
+                onChange={() => handleToggle(opt.id)}
+                className="accent-primary"
+              />
+              <span>{opt.nome}</span>
+            </label>
+          ))}
+        </div>
+      )}
+    </div>
+  )
 }
 
-interface AddAluguelModalProps {
+interface AddRentalModalProps {
   isOpen: boolean
   onClose: () => void
   onSubmit: (data: any) => void
+  initialData?: any
 }
+
+const STATUS_OPTIONS = [
+  { value: 'Ativo', label: 'Ativo' },
+  { value: 'Encerrado', label: 'Encerrado' },
+  { value: 'Cancelado', label: 'Cancelado' },
+  { value: 'Aguardando', label: 'Aguardando' },
+]
 
 export const AddRentalModal = ({
   isOpen,
   onClose,
   onSubmit,
-}: AddAluguelModalProps) => {
+  initialData,
+}: AddRentalModalProps) => {
+  const [ready, setReady] = useState(false)
+  const [clientes, setClientes] = useState<Cliente[]>([])
+  const [equipamentos, setEquipamentos] = useState<Equipamento[]>([])
   const [formData, setFormData] = useState({
-    client_id: '',
-    equipamentos: '',
-    start_date: '',
-    end_date: '',
+    cliente_id: '',
+    equipamentos: [] as number[],
+    data_inicio: '',
+    data_fim: '',
     valor_total: '',
     status: '',
   })
+
+  console.log('Clientes carregados:', clientes)
+  console.log('InitialData:', initialData)
+  console.log('FormData:', formData)
+
+  useEffect(() => {
+    setClientes(LocalStorageModel.readAll<Cliente>('clientes'))
+    setEquipamentos(LocalStorageModel.readAll<Equipamento>('equipamentos'))
+  }, [])
+
+  useEffect(() => {
+    if (isOpen && clientes.length > 0 && equipamentos.length > 0) {
+      setReady(true)
+      if (initialData) {
+        setFormData({
+          cliente_id: initialData.cliente_id
+            ? String(initialData.cliente_id)
+            : '',
+          equipamentos: initialData.equipamentos || [],
+          data_inicio: initialData.data_inicio || '',
+          data_fim: initialData.data_fim || '',
+          valor_total: initialData.valor_total
+            ? String(initialData.valor_total)
+            : '',
+          status: initialData.status ? String(initialData.status) : '',
+        })
+      } else {
+        setFormData({
+          cliente_id: '',
+          equipamentos: [],
+          data_inicio: '',
+          data_fim: '',
+          valor_total: '',
+          status: '',
+        })
+      }
+    } else {
+      setReady(false)
+    }
+  }, [isOpen, initialData, clientes, equipamentos])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
+  const handleSelectCliente = (v: string) =>
+    setFormData((prev) => ({ ...prev, cliente_id: v }))
+  const handleSelectStatus = (v: string) =>
+    setFormData((prev) => ({ ...prev, status: v }))
+  const handleSelectEquipamentos = (v: number[]) =>
+    setFormData((prev) => ({ ...prev, equipamentos: v }))
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-
-    const data: any = {
-      client_id: Number(formData.client_id),
-      equipamentos: formData.equipamentos
-        .split(',')
-        .map((id) => Number(id.trim()))
-        .filter((n) => !isNaN(n)),
-      start_date: new Date(formData.start_date),
-      end_date: new Date(formData.end_date),
+    const data = {
+      cliente_id: Number(formData.cliente_id),
+      equipamentos: formData.equipamentos,
+      data_inicio: formData.data_inicio,
+      data_fim: formData.data_fim,
       valor_total: parseFloat(formData.valor_total),
       status: formData.status,
+      id: initialData?.id,
     }
-
     onSubmit(data)
     setFormData({
-      client_id: '',
-      equipamentos: '',
-      start_date: '',
-      end_date: '',
+      cliente_id: '',
+      equipamentos: [],
+      data_inicio: '',
+      data_fim: '',
       valor_total: '',
       status: '',
     })
@@ -83,117 +196,113 @@ export const AddRentalModal = ({
             <X className="h-5 w-5 text-gray-600" />
           </Button>
         </div>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label
-              htmlFor="client_id"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              ID do Cliente
-            </label>
-            <Input
-              id="client_id"
-              name="client_id"
-              type="number"
-              value={formData.client_id}
-              onChange={handleChange}
-              required
-              className="w-full"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="equipamentos"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              IDs dos Equipamentos (separados por vírgula)
-            </label>
-            <Input
-              id="equipamentos"
-              name="equipamentos"
-              type="text"
-              value={formData.equipamentos}
-              onChange={handleChange}
-              required
-              className="w-full"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="start_date"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Data de Início
-            </label>
-            <Input
-              id="start_date"
-              name="start_date"
-              type="date"
-              value={formData.start_date}
-              onChange={handleChange}
-              required
-              className="w-full"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="end_date"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Data de Término
-            </label>
-            <Input
-              id="end_date"
-              name="end_date"
-              type="date"
-              value={formData.end_date}
-              onChange={handleChange}
-              required
-              className="w-full"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="valor_total"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Valor Total (R$)
-            </label>
-            <Input
-              id="valor_total"
-              name="valor_total"
-              type="number"
-              step="0.01"
-              value={formData.valor_total}
-              onChange={handleChange}
-              required
-              className="w-full"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="status"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Status
-            </label>
-            <Input
-              id="status"
-              name="status"
-              type="text"
-              value={formData.status}
-              onChange={handleChange}
-              required
-              className="w-full"
-            />
-          </div>
-          <div className="flex justify-end space-x-3 pt-4">
-            <Button type="button" variant="outline" onClick={onClose}>
-              Cancelar
-            </Button>
-            <Button type="submit">Adicionar Aluguel</Button>
-          </div>
-        </form>
+        {ready ? (
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Cliente
+              </label>
+              <Select
+                value={formData.cliente_id}
+                onValueChange={handleSelectCliente}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Selecione o cliente" />
+                </SelectTrigger>
+                <SelectContent>
+                  {clientes.map((cliente) => (
+                    <SelectItem key={cliente.id} value={String(cliente.id)}>
+                      {cliente.nome}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Equipamentos
+              </label>
+              <MultiSelectEquipamento
+                options={equipamentos}
+                value={formData.equipamentos}
+                onChange={handleSelectEquipamentos}
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Data de Início
+              </label>
+              <Input
+                id="data_inicio"
+                name="data_inicio"
+                type="date"
+                value={formData.data_inicio}
+                onChange={handleChange}
+                required
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Data de Término
+              </label>
+              <Input
+                id="data_fim"
+                name="data_fim"
+                type="date"
+                value={formData.data_fim}
+                onChange={handleChange}
+                required
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Valor Total (R$)
+              </label>
+              <Input
+                id="valor_total"
+                name="valor_total"
+                type="number"
+                step="0.01"
+                value={formData.valor_total}
+                onChange={handleChange}
+                required
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Status
+              </label>
+              <Select
+                value={formData.status}
+                onValueChange={handleSelectStatus}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Selecione o status" />
+                </SelectTrigger>
+                <SelectContent>
+                  {STATUS_OPTIONS.map((opt) => (
+                    <SelectItem key={opt.value} value={opt.value}>
+                      {opt.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="flex justify-end space-x-3 pt-4">
+              <Button type="button" variant="outline" onClick={onClose}>
+                Cancelar
+              </Button>
+              <Button type="submit">
+                {initialData ? 'Atualizar Aluguel' : 'Adicionar Aluguel'}
+              </Button>
+            </div>
+          </form>
+        ) : (
+          <div className="text-center py-8">Carregando dados...</div>
+        )}
       </div>
     </div>
   )

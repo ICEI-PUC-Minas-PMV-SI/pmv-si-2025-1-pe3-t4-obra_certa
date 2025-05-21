@@ -1,62 +1,66 @@
 'use client'
-
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Search, Filter, ChevronDown, Plus } from 'lucide-react'
+
+import {
+  LocalStorageModel,
+  Aluguel,
+  Cliente,
+  Equipamento,
+} from '@/lib/LocalStorageModel'
+
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-
-import { Rental, RentalTable } from '@/components/rental/rental_table'
+import { RentalTable } from '@/components/rental/rental_table'
 import { AddRentalModal } from '@/components/rental/rental_popup'
 
 export default function Alugueis() {
-  const initialAluguelList: Rental[] = [
-    {
-      id: 301,
-      client_id: 101,
-      equipamentos: [501],
-      start_date: new Date('2025-05-01'),
-      end_date: new Date('2025-05-07'),
-      valor_total: 210.0,
-      status: 'Ativo',
-    },
-    {
-      id: 302,
-      client_id: 102,
-      equipamentos: [502, 503],
-      start_date: new Date('2025-05-03'),
-      end_date: new Date('2025-05-10'),
-      valor_total: 350.0,
-      status: 'Encerrado',
-    },
-  ]
-
-  const [aluguéis, setAlugueis] = useState<Rental[]>(initialAluguelList)
+  const [aluguéis, setAlugueis] = useState<Aluguel[]>([])
+  const [clientes, setClientes] = useState<Cliente[]>([])
+  const [equipamentos, setEquipamentos] = useState<Equipamento[]>([])
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
+  const [editRental, setEditRental] = useState<Aluguel | null>(null)
 
-  const handleOpenModal = () => setIsModalOpen(true)
-  const handleCloseModal = () => setIsModalOpen(false)
-
-  const handleDelete = (aluguel: Rental) => {
-    setAlugueis((prev) => prev.filter((a) => a.id !== aluguel.id))
+  const handleEdit = (rental: Aluguel) => {
+    setEditRental(rental)
+    setIsModalOpen(true)
   }
 
-  const handleAddAluguelSubmit = (formData: Omit<Rental, 'id'>) => {
-    const novoAluguel: Rental = {
-      id: aluguéis.length > 0 ? Math.max(...aluguéis.map((a) => a.id)) + 1 : 1,
-      ...formData,
+  const handleOpenModal = () => setIsModalOpen(true)
+
+  const handleModalClose = () => {
+    setIsModalOpen(false)
+    setEditRental(null)
+  }
+
+  const handleDelete = (aluguel: Aluguel) => {
+    LocalStorageModel.delete('alugueis', aluguel.id)
+    setAlugueis(LocalStorageModel.readAll<Aluguel>('alugueis'))
+  }
+
+  const handleAddOrEditSubmit = (formData: Aluguel) => {
+    if (editRental) {
+      LocalStorageModel.update<Aluguel>('alugueis', editRental.id, formData)
+    } else {
+      LocalStorageModel.create<Aluguel>('alugueis', formData)
     }
-    setAlugueis((prev) => [...prev, novoAluguel])
-    console.log('Novo aluguel adicionado:', novoAluguel)
-    handleCloseModal()
+    setAlugueis(LocalStorageModel.readAll<Aluguel>('alugueis'))
+    handleModalClose()
   }
 
   const filteredAlugueis = aluguéis.filter((a) =>
     a.status.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
+  useEffect(() => {
+    setAlugueis(LocalStorageModel.readAll<Aluguel>('alugueis'))
+    setClientes(LocalStorageModel.readAll<Cliente>('clientes'))
+    setEquipamentos(LocalStorageModel.readAll<Equipamento>('equipamentos'))
+  }, [])
+
   return (
-    <div className="min-h-full container bg-background md:px-12 pt-12 pb-8">
+    <div className="min-h-[calc(100svh-150px)] container bg-background md:px-12 pt-12 pb-8">
       <div>
         <h2 className="text-3xl font-normal">Aluguéis</h2>
       </div>
@@ -95,14 +99,21 @@ export default function Alugueis() {
 
       <div className="pt-6">
         <div className="border border-gray-200 rounded-[25px] p-6">
-          <RentalTable data={filteredAlugueis} onDelete={handleDelete} />
+          <RentalTable
+            data={filteredAlugueis}
+            clientes={clientes}
+            equipamentos={equipamentos}
+            onDelete={handleDelete}
+            onEdit={handleEdit}
+          />
         </div>
       </div>
 
       <AddRentalModal
         isOpen={isModalOpen}
-        onClose={handleCloseModal}
-        onSubmit={handleAddAluguelSubmit}
+        onClose={handleModalClose}
+        onSubmit={handleAddOrEditSubmit}
+        initialData={editRental || undefined}
       />
     </div>
   )
