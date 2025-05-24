@@ -191,10 +191,19 @@ export class LocalStorageModel {
   private static validate<T>(entity: keyof DataModel, record: Partial<T>): void {
     const requiredFields = Object.keys(initialData[entity][0]);
     for (const field of requiredFields) {
-      if (!(field in record)) {
-        throw new Error(`Campo obrigatório ausente: ${field}`);
+      if (field in record && record[field as keyof T] == null) {
+        throw new Error(`Campo ${field} está vazio ou nulo`);
       }
     }
+  }
+
+  private static exists<T>(
+    entity: keyof DataModel,
+    field: keyof T,
+    value: any
+  ): boolean {
+    const data = this.getData()[entity] as T[];
+    return data.some((item) => item[field] === value);
   }
 
   private static generateId(entity: keyof DataModel): number {
@@ -202,8 +211,11 @@ export class LocalStorageModel {
     return items.length ? Math.max(...items.map((item: any) => item.id)) + 1 : 1;
   }
 
-  static create<T>(entity: keyof DataModel, record: Partial<T>): T {
+  static create<T>(entity: keyof DataModel, record: Partial<T>, uniqueField?: keyof T): T {
     this.validate<T>(entity, record);
+    if (uniqueField && this.exists<T>(entity, uniqueField, record[uniqueField])) {
+      return record as T;
+    }
     const data = this.getData();
     const newRecord = { ...record, id: this.generateId(entity) } as T;
     (data[entity] as T[]).push(newRecord);
