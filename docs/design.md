@@ -125,7 +125,13 @@ Nesta interface de listagem de aluguéis, foram aplicados fundamentos de design 
 
 ### Tela 4 - Aluguel do equipamento
 
-![Tela Aluguel do equipamento](img/telas/cliente-alugueis.png)
+<p align="center">
+  <img src="img/telas/cliente-alugueis.png" alt="Tela Aluguel do equipamento" width="600"/>
+</p>
+
+<p align="center">
+  <img src="img/telas/alugar-equipamento.png" alt="Tela Aluguel do equipamento 2" width="600"/>
+</p>
 
 Nesta interface da tela de aluguel de equipamento do sistema Obra Certa foram aplicados os princípios gestálticos e as regras de ouro da usabilidade para promover uma navegação fluida, reforçar a hierarquia visual e facilitar a compreensão dos conteúdos. A organização dos elementos, o uso de cores contrastantes e a consistência no layout contribuem para uma experiência clara, intuitiva e eficiente para o usuário.
 
