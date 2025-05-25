@@ -2,10 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { X } from 'lucide-react'
 
-import {
-  LocalStorageModel,
-  Cliente,
-} from '@/lib/LocalStorageModel'
+import { LocalStorageModel, Cliente } from '@/lib/LocalStorageModel'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
