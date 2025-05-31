@@ -1,20 +1,34 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { User } from 'lucide-react'
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
 import { Button } from '../ui/button'
 
 export const ProfileButton = () => {
   const router = useRouter()
 
   return (
-    <Button
-      variant="outline"
-      size="icon"
-      onClick={() => router.push('/perfil')}
-    >
-      <User className="w-5 h-5" />
-    </Button>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="icon" className="relative">
+          <User className="w-5 h-5" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem
+          onClick={() => router.push('/sign-in')}
+          className="cursor-pointer"
+        >
+          Sair
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }
