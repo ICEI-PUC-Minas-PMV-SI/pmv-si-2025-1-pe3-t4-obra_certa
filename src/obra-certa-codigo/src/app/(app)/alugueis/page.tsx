@@ -13,6 +13,17 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { RentalTable } from '@/components/rental/rental_table'
 import { AddRentalModal } from '@/components/rental/rental_popup'
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogCancel,
+  AlertDialogAction,
+} from '@/components/ui/alert-dialog'
 
 type AluguelComDetalhes = Aluguel & {
   cliente_nome: string
@@ -26,26 +37,33 @@ export default function Alugueis() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
   const [editRental, setEditRental] = useState<Aluguel | null>(null)
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
+  const [aluguelToDelete, setAluguelToDelete] = useState<Aluguel | null>(null)
 
   const atualizarAlugueisDetalhados = () => {
     const alugueisRaw = LocalStorageModel.readAll<Aluguel>('alugueis')
     const clientesRaw = LocalStorageModel.readAll<Cliente>('clientes')
-    const equipamentosRaw = LocalStorageModel.readAll<Equipamento>('equipamentos')
+    const equipamentosRaw =
+      LocalStorageModel.readAll<Equipamento>('equipamentos')
 
     setClientes(clientesRaw)
     setEquipamentos(equipamentosRaw)
 
-    const alugueisDetalhados: AluguelComDetalhes[] = alugueisRaw.map((aluguel) => {
-      const cliente = clientesRaw.find((c) => c.id === aluguel.cliente_id)
-      const nomes_equipamentos = aluguel.equipamentos
-        .map((id) => equipamentosRaw.find((e) => e.id === id)?.nome || 'Desconhecido')
+    const alugueisDetalhados: AluguelComDetalhes[] = alugueisRaw.map(
+      (aluguel) => {
+        const cliente = clientesRaw.find((c) => c.id === aluguel.cliente_id)
+        const nomes_equipamentos = aluguel.equipamentos.map(
+          (id) =>
+            equipamentosRaw.find((e) => e.id === id)?.nome || 'Desconhecido'
+        )
 
-      return {
-        ...aluguel,
-        cliente_nome: cliente?.nome || 'Desconhecido',
-        nomes_equipamentos,
+        return {
+          ...aluguel,
+          cliente_nome: cliente?.nome || 'Desconhecido',
+          nomes_equipamentos,
+        }
       }
-    })
+    )
 
     setAlugueis(alugueisDetalhados)
   }
@@ -63,8 +81,17 @@ export default function Alugueis() {
   }
 
   const handleDelete = (aluguel: Aluguel) => {
-    LocalStorageModel.delete('alugueis', aluguel.id)
-    atualizarAlugueisDetalhados()
+    setAluguelToDelete(aluguel)
+    setDeleteDialogOpen(true)
+  }
+
+  const confirmDelete = () => {
+    if (aluguelToDelete) {
+      LocalStorageModel.delete('alugueis', aluguelToDelete.id)
+      atualizarAlugueisDetalhados()
+    }
+    setDeleteDialogOpen(false)
+    setAluguelToDelete(null)
   }
 
   const handleAddOrEditSubmit = (formData: Aluguel) => {
@@ -150,6 +177,28 @@ export default function Alugueis() {
         onSubmit={handleAddOrEditSubmit}
         initialData={editRental || undefined}
       />
+      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Confirma a exclusão?</AlertDialogTitle>
+            <AlertDialogDescription>
+              Tem certeza que deseja excluir este aluguel? Essa ação não pode
+              ser desfeita.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel onClick={() => setDeleteDialogOpen(false)}>
+              Cancelar
+            </AlertDialogCancel>
+            <AlertDialogAction
+              className="bg-destructive text-white hover:bg-destructive/90"
+              onClick={confirmDelete}
+            >
+              Confirmar
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   )
 }
