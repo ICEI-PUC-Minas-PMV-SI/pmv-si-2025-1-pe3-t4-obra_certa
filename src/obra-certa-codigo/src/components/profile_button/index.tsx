@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { User } from 'lucide-react'
+import { LogOut, User } from 'lucide-react'
 
 import {
   DropdownMenu,
@@ -17,7 +17,7 @@ export const ProfileButton = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" className="relative">
+        <Button variant="outline" size="icon" className="relative" tabIndex={0}>
           <User className="w-5 h-5" />
         </Button>
       </DropdownMenuTrigger>
@@ -26,6 +26,7 @@ export const ProfileButton = () => {
           onClick={() => router.push('/sign-in')}
           className="cursor-pointer"
         >
+          <LogOut />
           Sair
         </DropdownMenuItem>
       </DropdownMenuContent>
