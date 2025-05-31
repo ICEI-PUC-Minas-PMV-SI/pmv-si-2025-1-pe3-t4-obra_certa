@@ -38,6 +38,11 @@ const items = [
     label: 'Reservas',
     link: '/reservas',
   },
+  {
+    id: '6',
+    label: 'Manutenções',
+    link: '/manutencoes',
+  },
 ]
 
 export const Navbar = () => {
