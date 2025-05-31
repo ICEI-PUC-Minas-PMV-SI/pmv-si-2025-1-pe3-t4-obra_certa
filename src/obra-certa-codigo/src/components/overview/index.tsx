@@ -61,17 +61,55 @@ const rentalsPerDayData = [
 export const Overview = () => {
   const handleDownloadReport = () => {
     const doc = new jsPDF()
-    doc.text('Obra Certa PDF - Relatório Dashboard', 20, 30)
+
+    doc.setFontSize(18)
+    doc.text('Relatório Dashboard - Obra Certa', 15, 20)
+
+    doc.setFontSize(12)
+    doc.text('Resumo:', 15, 35)
+    let y = 42
+    cardsContent.forEach((card) => {
+      doc.text(`${card.title}: ${card.value} (${card.percentage})`, 18, y)
+      y += 7
+    })
+
+    y += 5
+
+    doc.setFontSize(12)
+    doc.text('Total de Aluguéis por Equipamento:', 15, y)
+    y += 6
+    doc.setFontSize(10)
+    doc.text('Equipamento', 18, y)
+    doc.text('Qtd.', 78, y)
+    y += 5
+    totalRentalsData.forEach((item) => {
+      doc.text(item.equipment, 18, y)
+      doc.text(String(item.value), 78, y)
+      y += 5
+    })
+
+    y += 7
+
+    doc.setFontSize(12)
+    doc.text('Quantidade de Reservas por Dia:', 15, y)
+    y += 6
+    doc.setFontSize(10)
+    doc.text('Dia', 18, y)
+    doc.text('Qtd.', 48, y)
+    y += 5
+    rentalsPerDayData.forEach((item) => {
+      doc.text(item.day, 18, y)
+      doc.text(String(item.value), 48, y)
+      y += 5
+    })
 
     const pdfBlob = doc.output('blob')
     const url = URL.createObjectURL(pdfBlob)
-
     const link = document.createElement('a')
     link.href = url
     link.download = 'relatorio-obra-certa.pdf'
     link.target = '_blank'
     link.click()
-
     URL.revokeObjectURL(url)
   }
 
