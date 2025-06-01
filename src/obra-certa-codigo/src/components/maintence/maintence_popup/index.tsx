@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
-import { Maintence } from '@/app/(app)/manutenções/page';
+import { Maintence } from '@/app/(app)/manutencoes/page';
 
 export interface MaintenceFormData {
   client_id: number;
