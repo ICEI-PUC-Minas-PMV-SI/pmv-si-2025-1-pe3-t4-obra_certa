@@ -3,6 +3,7 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Button } from '@/components/ui/button'
 import { Pencil, Trash2 } from 'lucide-react'
 import { Cliente } from '@/lib/LocalStorageModel'
+import Link from 'next/link'
 
 export interface ClientsTableProps {
   data: Cliente[],
@@ -30,7 +31,7 @@ export default function ClientTable({data, onDelete, onEdit}: ClientsTableProps)
               <Checkbox className="peer h-4 w-4 border-black peer-checked:bg-black peer-checked:border-black" />
             </TableCell>
             <TableCell className="font-medium">{client.id}</TableCell>
-            <TableCell>{client.nome}</TableCell>
+            <TableCell><Link href={`/clientes/${client.id}`} className="text-primary hover:underline">{client.nome}</Link></TableCell>
             <TableCell>{client.email}</TableCell>
             <TableCell>{client.cpf}</TableCell>
             <TableCell className="text-right flex gap-1 justify-end">
