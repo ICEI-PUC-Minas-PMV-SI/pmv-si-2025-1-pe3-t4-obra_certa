@@ -9,7 +9,9 @@ import ReservasTable from "@/components/reservas/reservas_table/reservas_table";
 interface Reserva {
   id: number;
   equipamento: string;
+  codEquipamento: string;
   cliente: string;
+  cpfCliente: string;
   dataInicio: string;
   dataFim: string;
   status: string;
