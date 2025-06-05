@@ -46,7 +46,6 @@ export default function AddReservaModal({ isOpen, onClose, onSubmit }: AddReserv
     const [clientes, setClientes] = useState<Cliente[]>([]);
 
   useEffect(() => {
-    // Aqui você busca os clientes do localStorage usando sua classe
     const clientesFromStorage = LocalStorageModel.readAll<Cliente>("clientes");
     setClientes(clientesFromStorage);
     }, []);
