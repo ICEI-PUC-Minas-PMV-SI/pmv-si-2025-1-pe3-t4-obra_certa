@@ -21,26 +21,42 @@ export default function Reservas() {
   const [reservas, setReservas] = useState<Reserva[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [reservaEditando, setReservaEditando] = useState<Reserva | null>(null);
 
   const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setReservaEditando(null); 
+  };
 
-  const handleAddReservaSubmit = (formData: ReservaFormData) => {
-    const novaReserva: Reserva = {
-      id: reservas.length > 0 ? Math.max(...reservas.map(r => r.id)) + 1 : 1,
-      ...formData
-    };
-    setReservas(prev => [...prev, novaReserva]);
+  const handleSaveReserva = (formData: ReservaFormData) => {
+    if (reservaEditando) {
+      setReservas(prev =>
+        prev.map(r => (r.id === reservaEditando.id ? { ...r, ...formData } : r))
+      );
+    } else {
+      const novaReserva: Reserva = {
+        id: reservas.length > 0 ? Math.max(...reservas.map(r => r.id)) + 1 : 1,
+        ...formData,
+      };
+      setReservas(prev => [...prev, novaReserva]);
+    }
     handleCloseModal();
+  };
+
+  const handleEditReserva = (reserva: Reserva) => {
+    setReservaEditando(reserva);
+    setIsModalOpen(true);
   };
 
   const handleDeleteReserva = (reserva: Reserva) => {
     setReservas(prev => prev.filter(r => r.id !== reserva.id));
   };
 
-  const reservasFiltradas = reservas.filter((reserva) =>
-    reserva.equipamento.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    reserva.cliente.toLowerCase().includes(searchTerm.toLowerCase())
+  const reservasFiltradas = reservas.filter(
+    (reserva) =>
+      reserva.equipamento.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      reserva.cliente.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -80,16 +96,22 @@ export default function Reservas() {
 
       <div className="pt-6 pl-12 pr-12">
         <div className="border border-gray-200 rounded-[25px] p-6">
-          <ReservasTable data={reservasFiltradas} onDelete={handleDeleteReserva} />
+          <ReservasTable
+            data={reservasFiltradas}
+            onDelete={handleDeleteReserva}
+            onEdit={handleEditReserva}
+          />
         </div>
       </div>
 
       <AddReservaModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-        onSubmit={handleAddReservaSubmit}
+        onSubmit={handleSaveReserva}
+        reservaEditando={reservaEditando}
       />
     </div>
   );
 }
+
 
