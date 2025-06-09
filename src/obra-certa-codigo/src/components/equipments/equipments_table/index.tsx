@@ -1,3 +1,4 @@
+// components/equipments/equipments_table.tsx
 "use client"
 
 import { useRouter } from "next/navigation"
@@ -38,7 +39,7 @@ export default function EquipmentsTable({ data, onDelete }: EquipmentsTableProps
   const router = useRouter()
 
   const handleRowClick = (id: number) => {
-    router.push(`/equipamento/${id}`)
+    router.push(`/equipamentos/${id}`)
   }
 
   return (

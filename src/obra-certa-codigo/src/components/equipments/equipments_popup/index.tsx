@@ -1,3 +1,4 @@
+// components/equipments/equipments_popup.tsx
 import React, { useState } from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -7,7 +8,7 @@ export interface EquipmentFormData {
   codigo: string;
   nome: string;
   categoria: string;
-  descricao: string;
+  descricao?: string; // Made optional
   quantidade: number
   status: string;
 }
@@ -23,7 +24,7 @@ export default function AddEquipmentModal({ isOpen, onClose, onSubmit }: AddEqui
     codigo: "",
     nome: "",
     categoria: "",
-    descricao: "",
+    descricao: "", // Initialize with an empty string
     quantidade: 0,
     status: "",
   });
@@ -37,7 +38,8 @@ export default function AddEquipmentModal({ isOpen, onClose, onSubmit }: AddEqui
     event.preventDefault();
     onSubmit({
       ...formData,
-      quantidade: Number(formData.quantidade)
+      quantidade: Number(formData.quantidade),
+      descricao: formData.descricao || undefined, // Ensure empty string becomes undefined if not provided
     });
     setFormData({ codigo: "", nome: "", categoria: "", descricao: "", quantidade: 0, status: "" });
     onClose();
@@ -68,8 +70,8 @@ export default function AddEquipmentModal({ isOpen, onClose, onSubmit }: AddEqui
             <Input id="categoria" name="categoria" type="text" value={formData.categoria} onChange={handleChange} required className="w-full" />
           </div>
           <div>
-            <label htmlFor="descricao" className="block text-sm font-medium text-gray-700 mb-1">Descrição</label>
-            <Input id="descricao" name="descricao" value={formData.descricao} onChange={handleChange} required className="w-full" />
+            <label htmlFor="descricao" className="block text-sm font-medium text-gray-700 mb-1">Descrição (Opcional)</label>
+            <Input id="descricao" name="descricao" value={formData.descricao} onChange={handleChange} className="w-full" /> {/* Removed 'required' */}
           </div>
           <div>
             <label htmlFor="quantidade" className="block text-sm font-medium text-gray-700 mb-1">Quantidade</label>
