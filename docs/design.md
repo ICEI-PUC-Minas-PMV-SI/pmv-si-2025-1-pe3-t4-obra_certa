@@ -2,8 +2,6 @@
 
 ## 4.1 Personas
 
-Nesta seção você deve detalhar as personas do seu projeto. Deve-se documentar uma persona por integrante do projeto. Sugere-se a utilização do gerador de personas disponibilizado ao final da página https://www.rdstation.com/blog/marketing/persona-o-que-e/.
-
 ### Persona 1: Roberto Marinho
 
 ![Persona 1](img/personas/persona-roberto-marinho.png)
@@ -22,8 +20,6 @@ Nesta seção você deve detalhar as personas do seu projeto. Deve-se documentar
 
 ## 4.2 Mapa de Empatia
 
-Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A partir do mapa da empatia é possível detalhar a personalidade do cliente e compreendê-la melhor. O objetivo é obter um nível mais profundo de compreensão de uma persona. A seguir um exemplo de template que pode ser usado para o mapa de empatia. Para cada persona deverá ser apresentado o seu respectivo mapa de empatia. Sugere-se a utilização do template apresentado em https://www.rdstation.com/blog/marketing/mapa-da-empatia/.
-
 ### Mapa de Empatia 1: Roberto Marinho
 
 ![Mapa de Empatia 1](img/mapa-empatia/mapa-da-empatia-roberto-marinho.png)
@@ -41,8 +37,6 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 ![Mapa de Empatia 4](img/mapa-empatia/mapa-empatia-patricia-menezes.png)
 
 ## 4.3 Protótipos das Interfaces
-
-Apresente nesta seção os protótipos de alta fidelidade do sistema proposto. A fidelidade do protótipo refere-se ao nível de detalhes e funcionalidades incorporadas a ele. Assim, um protótipo de alta fidelidade é uma representação interativa do produto, baseada no computador ou em dispositivos móveis. Esse protótipo já apresenta maior semelhança com o design final em termos de detalhes e funcionalidades. No desenvolvimento dos protótipos, devem ser considerados os princípios gestálticos, as recomendações ergonômicas e as regras de design (como as 8 regras de ouro). É importante descrever no texto do relatório como os princípios gestálticos e as regras de ouro foram seguidas no projeto das interfaces. Nesta etapa deve-se dar uma ênfase na implementação do software de modo que possam ser realizados os testes com usuários na etapa seguinte.
 
 ### Tela 1 - Landing Page
 
@@ -122,3 +116,39 @@ Nesta interface de listagem de aluguéis, foram aplicados fundamentos de design 
 6. Permitir a Reversão de Ações: Embora não visível diretamente, ícones como a lixeira sugerem ações reversíveis que podem, idealmente, ser acompanhadas de confirmação antes da execução.
 7. Fornecer Controle de Iniciativa do Usuário: O usuário pode decidir quando adicionar, filtrar ou editar informações, mantendo o controle total da interface.
 8. Reduzir a Carga de Memória de Trabalho: Todas as informações relevantes de cada aluguel estão visíveis em uma única linha, evitando que o usuário tenha que memorizar dados para comparar.
+
+
+### Tela 4 - Aluguel do equipamento
+
+<p align="center">
+  <img src="img/telas/cliente-alugueis.png" alt="Tela Aluguel do equipamento" width="600"/>
+</p>
+
+<p align="center">
+  <img src="img/telas/alugar-equipamento.png" alt="Tela Aluguel do equipamento 2" width="600"/>
+</p>
+
+Nesta interface da tela de aluguel de equipamento do sistema Obra Certa foram aplicados os princípios gestálticos e as regras de ouro da usabilidade para promover uma navegação fluida, reforçar a hierarquia visual e facilitar a compreensão dos conteúdos. A organização dos elementos, o uso de cores contrastantes e a consistência no layout contribuem para uma experiência clara, intuitiva e eficiente para o usuário.
+
+### Aplicação dos Princípios Gestálticos
+
+- Proximidade: Os campos “Quantidade”, “Dias de aluguel” e “Preço total” estão agrupados visualmente no mesmo bloco, indicando ao usuário que pertencem ao mesmo processo de interação. A imagem do equipamento e sua descrição técnica também são exibidas próximas, sugerindo que se referem ao mesmo item.
+- Similaridade: Botões, campos de texto e títulos seguem o mesmo estilo visual (cores, fontes e bordas), facilitando o reconhecimento de padrões e a identificação de elementos com funções semelhantes.
+- Continuidade: A organização em colunas e seções verticais cria um fluxo natural de leitura, guiando o olhar do topo para a base da tela de forma fluida e previsível.
+- Fechamento: As seções são delimitadas por contêineres com sombras e bordas suaves, permitindo que o usuário perceba blocos completos de informação, mesmo com divisões parciais ou visuais sutis.
+- Figura-Fundo: O equipamento em destaque utiliza contraste de cor e posicionamento para se destacar do fundo claro, facilitando sua identificação como elemento principal da página.
+- Região Comum: As informações descritivas e técnicas (como “Descrição”, “Características Técnicas” e “Cuidados Especiais”) estão dispostas dentro de um mesmo cartão visual, reforçando que fazem parte de um mesmo grupo de conteúdo.
+- Ponto Focal: O botão “Alugar agora”, em cor laranja vibrante e tamanho destacado, atua como o principal ponto de atenção da interface, guiando o usuário à ação esperada.
+
+### Aplicação das Oito Regras de Ouro
+
+1. Perseguir a Consistência: Tipografias, espaçamentos, botões e campos seguem o mesmo padrão visual e funcional das outras telas do sistema.
+2. Fornecer Atalhos: A interface permite o aluguel direto do equipamento, sem necessidade de navegação adicional, otimizando o fluxo de ação do usuário.
+3. Fornecer Feedbacks Informativos: O valor do aluguel é atualizado automaticamente conforme os campos de quantidade e dias são modificados, oferecendo resposta visual imediata.
+4. Marcar o Final dos Diálogos: A finalização do processo ocorre de forma clara com o botão “Alugar agora”, sinalizando o encerramento da ação.
+5. Fornecer Prevenção de Erros e Forma Simples de Corrigi-los: Os campos são bem identificados e utilizam valores padrão, minimizando erros no preenchimento.
+6. Permitir a Reversão de Ações: O usuário pode ajustar os valores antes de confirmar a solicitação, permitindo correções imediatas.
+7. Fornecer Controle de Iniciativa do Usuário: O usuário pode decidir a quantidade, dias de aluguel e o momento de realizar a solicitação, mantendo o controle da interação.
+8. Reduzir a Carga de Memória de Trabalho: Todas as informações relevantes estão presentes na mesma tela — descrição do equipamento, informações técnicas e formulário de aluguel — evitando a necessidade de memorização ou troca de páginas.
+
+

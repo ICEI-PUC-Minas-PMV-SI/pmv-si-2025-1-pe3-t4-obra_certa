@@ -49,7 +49,7 @@ O sistema Obra Certa é voltado exclusivamente para a gestão de aluguéis de eq
 | RF2    | Gerenciar Equipamentos                               | Processamento de Inclusão, Alteração, Exclusão de equipamentos                                                           |
 | RF3    | Consultar Equipamentos                               | Processamento de Consulta de equipamentos                                                                                |
 | RF4    | Gerenciar Aluguel                                    | Processamento de Inclusão, Alteração, Exclusão e Consulta de aluguéis                                                    |
-| RF5    | Gerenciar Manutenção                                | Processamento de Inclusão, Alteração, Exclusão e Consulta de manutenções dos equipamentos                                |
+| RF5    | Gerenciar Manutenção                                 | Processamento de Inclusão, Alteração, Exclusão e Consulta de manutenções dos equipamentos                                |
 | RF6    | Filtrar equipamentos                                 | Implementar filtros de equipamentos por tipo/categoria                                                                   |
 | RF7    | Visualizar status de disponibilidade                 | Mostrar o status de disponibilidade dos equipamentos                                                                     |
 | RF8    | Visualizar calendário                                | Exibir calendário com datas disponíveis para cada equipamento                                                            |
@@ -721,15 +721,15 @@ O diagrama de classes a seguir apresenta a estrutura fundamental do sistema de g
 
 ### 3.4.4 Descrições das Classes
 
-| #   | Nome                      | Descrição                                                   |
-| --- | -----------------         | ----------------------------------------------------------- |
-| 1   | Usuário                   | Classe genérica para representar os usuários do sistema. Serve como superclasse para Administrador e Cliente.               |
-| 2   | Administrador             | Classe que herda características de Usuário. Ser responsável por gerar relatórios no sistema.                               |
-| 3   | Cliente                   | Classe que herda características de Usuário. Poder alugar e reservar equipamentos                                           |
-| 4   | Reserva                   |	Representar uma solicitação de reserva feita por um Cliente. Pode conter diversos itens de reserva.                         |
-| 5   | ItemReserva               | Representar um equipamento específico incluído em uma Reserva.                                                              |
-| 6   | Locação                   | Representar uma locação confirmada de equipamentos feita por um Cliente. Pode conter diversos itens de locação.             |
-| 7   | ItemLocacao               | Representar um equipamento específico incluído em uma Locação                                                               |
-| 8   | Equipamento               | Representar os equipamentos disponíveis para aluguel e reserva. Poder passar por manutenções.                               |
-| 9   | AgendaDisponibilidade     | Controlar a disponibilidade dos equipamentos para reserva ou locação.                                                       |
-| 10  | Manutenção                | Registrar manutenções realizadas em um equipamento.                                                                         |
+| #   | Nome                  | Descrição                                                                                                       |
+| --- | --------------------- | --------------------------------------------------------------------------------------------------------------- |
+| 1   | Usuário               | Classe genérica para representar os usuários do sistema. Serve como superclasse para Administrador e Cliente.   |
+| 2   | Administrador         | Classe que herda características de Usuário. Ser responsável por gerar relatórios no sistema.                   |
+| 3   | Cliente               | Classe que herda características de Usuário. Poder alugar e reservar equipamentos                               |
+| 4   | Reserva               | Representar uma solicitação de reserva feita por um Cliente. Pode conter diversos itens de reserva.             |
+| 5   | ItemReserva           | Representar um equipamento específico incluído em uma Reserva.                                                  |
+| 6   | Locação               | Representar uma locação confirmada de equipamentos feita por um Cliente. Pode conter diversos itens de locação. |
+| 7   | ItemLocacao           | Representar um equipamento específico incluído em uma Locação                                                   |
+| 8   | Equipamento           | Representar os equipamentos disponíveis para aluguel e reserva. Poder passar por manutenções.                   |
+| 9   | AgendaDisponibilidade | Controlar a disponibilidade dos equipamentos para reserva ou locação.                                           |
+| 10  | Manutenção            | Registrar manutenções realizadas em um equipamento.                                                             |
