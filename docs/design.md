@@ -117,6 +117,7 @@ Nesta interface de listagem de aluguéis, foram aplicados fundamentos de design 
 7. Fornecer Controle de Iniciativa do Usuário: O usuário pode decidir quando adicionar, filtrar ou editar informações, mantendo o controle total da interface.
 8. Reduzir a Carga de Memória de Trabalho: Todas as informações relevantes de cada aluguel estão visíveis em uma única linha, evitando que o usuário tenha que memorizar dados para comparar.
 
+
 ### Tela 4 - Aluguel do equipamento
 
 <p align="center">
@@ -149,4 +150,5 @@ Nesta interface da tela de aluguel de equipamento do sistema Obra Certa foram ap
 6. Permitir a Reversão de Ações: O usuário pode ajustar os valores antes de confirmar a solicitação, permitindo correções imediatas.
 7. Fornecer Controle de Iniciativa do Usuário: O usuário pode decidir a quantidade, dias de aluguel e o momento de realizar a solicitação, mantendo o controle da interação.
 8. Reduzir a Carga de Memória de Trabalho: Todas as informações relevantes estão presentes na mesma tela — descrição do equipamento, informações técnicas e formulário de aluguel — evitando a necessidade de memorização ou troca de páginas.
+
 
