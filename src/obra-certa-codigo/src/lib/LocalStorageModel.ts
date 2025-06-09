@@ -188,15 +188,6 @@ export class LocalStorageModel {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   }
 
-  private static validate<T>(entity: keyof DataModel, record: Partial<T>): void {
-    const requiredFields = Object.keys(initialData[entity][0]);
-    for (const field of requiredFields) {
-      if (field in record && record[field as keyof T] == null) {
-        throw new Error(`Campo ${field} está vazio ou nulo`);
-      }
-    }
-  }
-
   private static exists<T>(
     entity: keyof DataModel,
     field: keyof T,
@@ -212,7 +203,6 @@ export class LocalStorageModel {
   }
 
   static create<T>(entity: keyof DataModel, record: Partial<T>, uniqueField?: keyof T): T {
-    this.validate<T>(entity, record);
     if (uniqueField && this.exists<T>(entity, uniqueField, record[uniqueField])) {
       return record as T;
     }
