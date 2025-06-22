@@ -1,0 +1,31 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title:
+authors:
+  - family-names: de Souza Colini Taioba
+    given-names: Fernando
+  - family-names: Carvalho de Almeida Silva
+    given-names: Gabriel
+  - family-names: Rangel Penaforte Mendes
+    given-names: Italo
+  - family-names: Alves de Medeiros Ferreira
+    given-names: Lucas
+  - family-names: Paulo Oliveira Silva
+    given-names: Marcus
+  - family-names: Duarte Torres de Oliveira
+    given-names: Raul
+  - name-suffix: Professora
+    affiliation: PUC Minas
+    family-names: Martins de Oliveira
+    given-names: Fábio
+keywords:
+  - Locação de equipamentos
+  - Automação de processos
+  - Gerenciamento integrado
+  - Eficiência operacional
+  - Satisfação do cliente
+
+repository-code:
+license: CC-BY-4.0
+version: 1.0.0
+date-released:
