@@ -15,3 +15,5 @@ Esta página apresenta o Plano de Testes de Software, detalhando as duas abordag
 [Relatório de Testes com Usuário - Marcus Paulo Oliveira](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Marcus.pdf)
 
 [Relatório de Testes com Usuário - Gabriel Carvalho de Almeida Silva](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Gabriel.pdf)
+
+[Relatório de Testes com Usuário - Raul Duarte Torres de Oliveira](./files/Relatorio%20de%20Testes%20Com%20Usuario%20-%20Raul%20Duarte.pdf)
