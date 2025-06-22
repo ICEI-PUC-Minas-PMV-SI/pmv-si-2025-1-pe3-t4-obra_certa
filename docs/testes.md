@@ -8,7 +8,7 @@ Esta página apresenta o Plano de Testes de Software, detalhando as duas abordag
 
 [Avaliação Heurística](./files/Avaliação%20Heuristica.xlsx)
 
-[Relatório de Testes com Usuário - Fernando de Souza Colini Taioba](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Fernando%20Colini.pdf)
+[Relatório de Testes com Usuário - Fernando de Souza Colini Taioba](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Fernando.pdf)
 
 [Relatório de Testes com Usuário - Gabriel Carvalho de Almeida Silva](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Gabriel.pdf)
 
