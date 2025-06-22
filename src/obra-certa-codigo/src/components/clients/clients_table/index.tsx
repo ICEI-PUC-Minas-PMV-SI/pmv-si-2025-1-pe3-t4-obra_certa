@@ -3,7 +3,7 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Button } from '@/components/ui/button'
 import { Pencil, Trash2 } from 'lucide-react'
 import { Cliente } from '@/lib/LocalStorageModel'
-import Link from 'next/link'
+import {useRouter} from "next/navigation";
 
 export interface ClientsTableProps {
   data: Cliente[],
@@ -12,7 +12,13 @@ export interface ClientsTableProps {
 }
 
 export default function ClientTable({data, onDelete, onEdit}: ClientsTableProps) {
-  return (
+    const router = useRouter()
+
+    const handleRowClick = (id: number) => {
+        router.push(`/clientes/${id}`)
+    }
+
+    return (
     <Table>
       <TableHeader>
         <TableRow>
@@ -26,15 +32,15 @@ export default function ClientTable({data, onDelete, onEdit}: ClientsTableProps)
       </TableHeader>
       <TableBody>
         {data.map((client) => (
-          <TableRow key={client.id}>
-            <TableCell>
+          <TableRow className="cursor-pointer" key={client.id} onClick={() => handleRowClick(client.id)}>
+            <TableCell onClick={(e) => e.stopPropagation()}>
               <Checkbox className="peer h-4 w-4 border-black peer-checked:bg-black peer-checked:border-black" />
             </TableCell>
             <TableCell className="font-medium">{client.id}</TableCell>
-            <TableCell><Link href={`/clientes/${client.id}`} className="text-primary hover:underline">{client.nome}</Link></TableCell>
+            <TableCell className="text-primary hover:underline">{client.nome}</TableCell>
             <TableCell>{client.email}</TableCell>
             <TableCell>{client.cpf}</TableCell>
-            <TableCell className="text-right flex gap-1 justify-end">
+            <TableCell className="text-right flex gap-1 justify-end" onClick={(e) => e.stopPropagation()}>
               <Button variant="ghost" size="icon" aria-label="Editar" onClick={():void => onEdit(client)}>
                 <Pencil className="h-4 w-4" />
               </Button>
