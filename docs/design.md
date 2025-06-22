@@ -158,7 +158,7 @@ Nesta interface de listagem de clientes, foram aplicados fundamentos de design c
 
 ### Aplicação dos Princípios Gestálticos
 
-- Proximidade: Os campos de "Busca", "cadastrar cliente" e "filtrar" estão agrupados na mesma linha, indicando ao usuário que esses campos trazem modificações gerais na tabela abaixo.
+- Proximidade: Os campos "Busca", "cadastrar cliente" e "filtrar" estão agrupados na mesma linha, indicando ao usuário que esses campos trazem modificações gerais na tabela abaixo.
 - Boa continuidade (alinhamento): A estrutura da página, ajuda a guiar o usuário de maneira que os itens que ficam mais acima apresentam informações mais gerais e os itens mais abaixo apresentam informações mais específicas sobre as ações e conteúdo da página.
 - Simetria: A disposição dos campos e da tabela mantém uma estrutura simétrica, contribuindo para um visual limpo e estável.
 - Similaridade: Ícones de ações (editar e excluir), botões e campos seguem estilos visuais padronizados, reforçando que desempenham funções semelhantes em diferentes contextos.
@@ -171,7 +171,7 @@ Nesta interface de listagem de clientes, foram aplicados fundamentos de design c
 1. Perseguir a Consistência: Tipografias, espaçamentos, botões e ícones seguem um padrão visual coerente com o restante do sistema.
 2. Fornecer Atalhos: A busca por cliente e o botão “Filtrar” oferecem caminhos rápidos para localizar ou refinar dados específicos.
 3. Fornecer Feedbacks Informativos: A atualização dos itens na tabela, seja atualização dos campos ou até deleção do registro, é atualizada em tempo real.
-4. Marcar o Final dos Diálogos: A ação de "Cadastrar Cliente" e o clique no lapíz de edição do cliente dispara a abertura de um modal, delimitando visualmente e funcionalmente o início de um novo fluxo, e permitindo ao usuário entender que está em um estado temporário e isolado até a conclusão ou cancelamento da ação.
+4. Marcar o Final dos Diálogos: A ação de "Cadastrar Cliente" e o clique no lapíz que possibilita a edição do cliente dispara a abertura de um modal, delimitando visualmente e funcionalmente o início de um novo fluxo, e permitindo ao usuário entender que está em um estado temporário e isolado até a conclusão ou cancelamento da ação.
 5. Fornecer Prevenção de Erros e Forma Simples de Corrigi-los: O layout direto e os ícones com funções específicas reduzem a ambiguidade e a chance de erro.
 6. Permitir a Reversão de Ações: Embora não visível diretamente, ícones como a lixeira sugerem ações reversíveis que podem, idealmente, ser acompanhadas de confirmação antes da execução.
 7. Fornecer Controle de Iniciativa do Usuário: O usuário pode decidir quando adicionar, filtrar ou editar informações, mantendo o controle total da interface.
