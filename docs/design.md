@@ -150,3 +150,30 @@ Nesta interface da tela de aluguel de equipamento do sistema Obra Certa foram ap
 7. Fornecer Controle de Iniciativa do Usuário: O usuário pode decidir a quantidade, dias de aluguel e o momento de realizar a solicitação, mantendo o controle da interação.
 8. Reduzir a Carga de Memória de Trabalho: Todas as informações relevantes estão presentes na mesma tela — descrição do equipamento, informações técnicas e formulário de aluguel — evitando a necessidade de memorização ou troca de páginas.
 
+### Tela 5 - Clientes
+
+![Tela Clientes](img/telas/clientes-page.png)
+
+Nesta interface de listagem de clientes, foram aplicados fundamentos de design com base nos princípios gestálticos e nas regras de ouro da usabilidade, garantindo clareza e organização, trazendo uma experiência de uso eficiente e intuitiva.
+
+### Aplicação dos Princípios Gestálticos
+
+- Proximidade: Os campos de "Busca", "cadastrar cliente" e "filtrar" estão agrupados na mesma linha, indicando ao usuário que esses campos trazem modificações gerais na tabela abaixo.
+- Boa continuidade (alinhamento): A estrutura da página, ajuda a guiar o usuário de maneira que os itens que ficam mais acima apresentam informações mais gerais e os itens mais abaixo apresentam informações mais específicas sobre as ações e conteúdo da página.
+- Simetria: A disposição dos campos e da tabela mantém uma estrutura simétrica, contribuindo para um visual limpo e estável.
+- Similaridade: Ícones de ações (editar e excluir), botões e campos seguem estilos visuais padronizados, reforçando que desempenham funções semelhantes em diferentes contextos.
+- Fecho: A delimitação de fundo branco do bloco da página, ajuda ao usuário perceber o bloco completo da área que ele pode interagir na página.
+- Região comum: Todos os registros da tabela estão contidos dentro de um único bloco delimitado, indicando que pertencem ao mesmo grupo funcional.
+- Conectividade: Cada linha apresenta ícones de ação conectados diretamente ao respectivo registro, estabelecendo uma relação funcional clara.
+
+### Aplicação das Oito Regras de Ouro
+
+1. Perseguir a Consistência: Tipografias, espaçamentos, botões e ícones seguem um padrão visual coerente com o restante do sistema.
+2. Fornecer Atalhos: A busca por cliente e o botão “Filtrar” oferecem caminhos rápidos para localizar ou refinar dados específicos.
+3. Fornecer Feedbacks Informativos: A atualização dos itens na tabela, seja atualização dos campos ou até deleção do registro, é atualizada em tempo real.
+4. Marcar o Final dos Diálogos: A ação de "Cadastrar Cliente" e o clique no lapíz de edição do cliente dispara a abertura de um modal, delimitando visualmente e funcionalmente o início de um novo fluxo, e permitindo ao usuário entender que está em um estado temporário e isolado até a conclusão ou cancelamento da ação.
+5. Fornecer Prevenção de Erros e Forma Simples de Corrigi-los: O layout direto e os ícones com funções específicas reduzem a ambiguidade e a chance de erro.
+6. Permitir a Reversão de Ações: Embora não visível diretamente, ícones como a lixeira sugerem ações reversíveis que podem, idealmente, ser acompanhadas de confirmação antes da execução.
+7. Fornecer Controle de Iniciativa do Usuário: O usuário pode decidir quando adicionar, filtrar ou editar informações, mantendo o controle total da interface.
+8. Reduzir a Carga de Memória de Trabalho: Todas as informações relevantes de cada cliente estão visíveis em uma única linha, evitando que o usuário tenha que memorizar dados para comparar.
+
