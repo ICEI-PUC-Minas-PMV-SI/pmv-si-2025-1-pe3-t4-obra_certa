@@ -8,12 +8,14 @@ Esta página apresenta o Plano de Testes de Software, detalhando as duas abordag
 
 [Avaliação Heurística](./files/Avaliação%20Heuristica.xlsx)
 
-[Relatório de Testes com Usuário - Ítalo Rangel](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Italo.pdf)
-
-[Relatório de Testes com Usuário - Lucas Medeiros](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Lucas.pdf)
-
-[Relatório de Testes com Usuário - Marcus Paulo Oliveira](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Marcus.pdf)
+[Relatório de Testes com Usuário - Fernando de Souza Colini Taioba](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Fernando%20Colini.pdf)
 
 [Relatório de Testes com Usuário - Gabriel Carvalho de Almeida Silva](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Gabriel.pdf)
+
+[Relatório de Testes com Usuário - Italo Rangel Penaforte Mendes](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Italo.pdf)
+
+[Relatório de Testes com Usuário - Lucas Alves de Medeiros Ferreira](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Lucas.pdf)
+
+[Relatório de Testes com Usuário - Marcus Paulo Oliveira Silva](./files/Relátorio%20de%20Testes%20com%20Usuário%20-%20Marcus.pdf)
 
 [Relatório de Testes com Usuário - Raul Duarte Torres de Oliveira](./files/Relatorio%20de%20Testes%20Com%20Usuario%20-%20Raul%20Duarte.pdf)
